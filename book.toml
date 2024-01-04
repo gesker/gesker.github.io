@@ -16,8 +16,8 @@ extra-watch-dirs = []             # directories to watch for triggering builds
 
 [output.html]
 # theme = "my-theme"
-default-theme = "light"
-preferred-dark-theme = "navy"
+default-theme = "rust"
+preferred-dark-theme = "ayu"
 # curly-quotes = true
 # mathjax-support = false
 # copy-fonts = true
