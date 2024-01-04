@@ -24,5 +24,5 @@ dennis.gesker.com is CNAME to gesker.github.io
 
 ## Zalag Logo
 
-Zalago is a registered trademark
-All right reserved. No rights granted.
+Zalag Logo is a registered trademark. All right reserved.
+Zalag Logo Copyright Dennis Gesker
