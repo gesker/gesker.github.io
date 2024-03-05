@@ -24,16 +24,17 @@ preferred-dark-theme = "frappe"
 # additional-css = ["custom.css", "custom2.css"]
 # additional-js = ["custom.js"]
 no-section-label = false
-# git-repository-url = "https://github.com/rust-lang/mdBook"
+git-repository-url = "https://github.com/gesker/gesker.github.io"
 # git-repository-icon = "fa-github"
 # edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
 # site-url = "/example-book/"
 cname = "dennis.gesker.com"
-additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
+additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-admonish.css", "./mdbook-admonish.css"]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
 # input-404 = "not-found.md"
 
 # [output.html.fold]
-# enable = false    # whether or not to enable section folding
+# enable = false    # whether to enable section folding
 # level = 0         # the depth to start folding
 
 [output.html.playground]
@@ -64,3 +65,11 @@ copy-js = true           # include Javascript code for search
 
 [preprocessor.catppuccin]
 assets_version = "2.1.0" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
+
+[preprocessor.admonish]
+after = ["links"]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"

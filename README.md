@@ -17,6 +17,13 @@ To watch and server on localhost port 3000 as you are editing md files:
 mdbook serve --open
 ```
 
+### Extra Plugins Used
+
+- [mdbook-catppuccin](https://github.com/catppuccin/mdBook)
+- [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish)
+- [mdbook-mermaid](https://github.com/badboy/mdbook-mermaid)
+
+
 ## DNS
 
 dennis.gesker.com is CNAME to gesker.github.io
