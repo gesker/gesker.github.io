@@ -34,12 +34,13 @@ backed and are at the same time AI resistant.
 Aveum Systems, Inc. is a Delaware Corporation operating in the US and Europe targeting pilot programs in Africa and
 the [Kingdom of Saudi Arabia](https://houseofsaud.com/).
 
+
 ## Trademarks
 
 
-| **Quaerite Lux et Sapientia**                        |
-|------------------------------------------------------|
-| ![Zalag Logo](images/zalag_square_match_512x512.png) |
+| **Quaerite Lux et Sapientia**                               |
+|-------------------------------------------------------------|
+| ![Zalag Logo](images/zalag_square_match_512x512_frappe.png) |
 
 ```admonish note
 **Zalag Logo** © 2020 Dennis R. Gesker. All Rights Reserved.\

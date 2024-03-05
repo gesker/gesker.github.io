@@ -1,6 +1,6 @@
- .frappe .menu-title {
+.frappe .menu-title {
     display: inline-block;
-     #font-weight: 200;
+    #font-weight: 200;
     font-size: 2.4rem;
     line-height: var(--menu-bar-height);
     text-align: center;
@@ -9,51 +9,51 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-     font-weight: bold;
-     color: #ca9ee6;
- }
+    font-weight: bold;
+    color: #ca9ee6;
+}
 
- .latte .menu-title {
-     display: inline-block;
-     #font-weight: 200;
-     font-size: 2.4rem;
-     line-height: var(--menu-bar-height);
-     text-align: center;
-     margin: 0;
-     flex: 1;
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     font-weight: bold;
-     color: #8839ef;
- }
+.latte .menu-title {
+    display: inline-block;
+    #font-weight: 200;
+    font-size: 2.4rem;
+    line-height: var(--menu-bar-height);
+    text-align: center;
+    margin: 0;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    color: #8839ef;
+}
 
- .mocha .menu-title {
-     display: inline-block;
-     #font-weight: 200;
-     font-size: 2.4rem;
-     line-height: var(--menu-bar-height);
-     text-align: center;
-     margin: 0;
-     flex: 1;
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     font-weight: bold;
-     color: #cba6f7;
- }
+.mocha .menu-title {
+    display: inline-block;
+    #font-weight: 200;
+    font-size: 2.4rem;
+    line-height: var(--menu-bar-height);
+    text-align: center;
+    margin: 0;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    color: #cba6f7;
+}
 
- .macchiato .menu-title {
-     display: inline-block;
-     #font-weight: 200;
-     font-size: 2.4rem;
-     line-height: var(--menu-bar-height);
-     text-align: center;
-     margin: 0;
-     flex: 1;
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     font-weight: bold;
-     color: #c6a0f6;
- }
+.macchiato .menu-title {
+    display: inline-block;
+    #font-weight: 200;
+    font-size: 2.4rem;
+    line-height: var(--menu-bar-height);
+    text-align: center;
+    margin: 0;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    color: #c6a0f6;
+}
