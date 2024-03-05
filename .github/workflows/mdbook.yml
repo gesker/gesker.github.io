@@ -42,6 +42,7 @@ jobs:
           cargo install mdbook-admonish
           mdbook-admonish install --css-dir ./theme .
           cargo install mdbook-mermaid
+          mdbook-mermaid install
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
