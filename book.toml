@@ -15,9 +15,9 @@ use-default-preprocessors = true  # use the default preprocessors
 extra-watch-dirs = []             # directories to watch for triggering builds
 
 [output.html]
-# theme = "my-theme"
-default-theme = "rust"
-preferred-dark-theme = "ayu"
+#theme = "my-custom-theme"
+default-theme = "frappe"
+preferred-dark-theme = "frappe"
 # curly-quotes = true
 # mathjax-support = false
 # copy-fonts = true
@@ -29,6 +29,7 @@ no-section-label = false
 # edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
 # site-url = "/example-book/"
 cname = "dennis.gesker.com"
+additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 # input-404 = "not-found.md"
 
 # [output.html.fold]
@@ -58,3 +59,8 @@ boost-paragraph = 1      # ranking boost factor for matches in text
 expand = true            # partial words will match longer terms
 heading-split-level = 3  # link results to heading levels
 copy-js = true           # include Javascript code for search
+
+[preprocessor]
+
+[preprocessor.catppuccin]
+assets_version = "2.1.0" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
