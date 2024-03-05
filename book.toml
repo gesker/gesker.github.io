@@ -29,8 +29,8 @@ git-repository-url = "https://github.com/gesker/gesker.github.io"
 # edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
 # site-url = "/example-book/"
 cname = "dennis.gesker.com"
-additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-admonish.css", "./mdbook-admonish.css", "./theme/my.css" ]
-additional-js = ["mermaid.min.js", "mermaid-init.js"]
+additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-admonish.css", "./theme/my.css" , "./theme/mdbook-admonish.css"]
+additional-js = ["./theme/mermaid.min.js", "./theme/mermaid-init.js"]
 # input-404 = "not-found.md"
 
 # [output.html.fold]
