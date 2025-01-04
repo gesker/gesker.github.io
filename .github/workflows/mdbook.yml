@@ -27,9 +27,9 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: debian-bookworm
+    runs-on: ubuntu-latest
     env:
-      MDBOOK_VERSION: 0.4.37
+      MDBOOK_VERSION: 0.4.40
     steps:
       - uses: actions/checkout@v4
       - name: Install mdBook
