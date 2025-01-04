@@ -29,6 +29,10 @@ mdbook serve --open
 dennis.gesker.com is CNAME to gesker.github.io
 <www.gesker.com> is a server side redirect to dennis.gesker.com
 
+
+
+20250104
+
 ## Zalag Logo
 
 Zalag Logo is a registered trademark. All right reserved.
