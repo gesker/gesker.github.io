@@ -1,0 +1,28 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "hide-files.files": [],
+  "cSpell.words": [
+    "Alamon",
+    "Aveum",
+    "Glassfish",
+    "Kalispell",
+    "NOFORN",
+    "Qgis",
+    "Quaerite",
+    "Quarkus",
+    "Sapientia",
+    "SDLC",
+    "Zalag"
+  ],
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  }
+}
