@@ -2,6 +2,8 @@
 
 ## Systems and Methods for Distributed Blockchain Monitoring and Inherent Latency Compensation
 
+---
+
 **Filed**: 2023-May-25\
 **Number**: 18/323408\
 **Document**: US-20240303665-A1\
@@ -10,6 +12,8 @@
 Methods, systems and computer readable media for managing (e.g., queuing, batching, submission, and logging) and monitoring distributed blockchain operations such as cryptocurrency operations and transactions by client application systems and end users of a client application system to compensate for the inherent latency in distributed blockchain systems.
 
 ## Systems and Methods for Economic Price Discovery In Social Media Networks Including Games
+
+---
 
 **Filed**: 2023-May-25\
 **Number**: 18/323409\

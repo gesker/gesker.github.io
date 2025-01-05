@@ -10,22 +10,36 @@
   "hide-files.files": [],
   "cSpell.words": [
     "Alamon",
+    "apdisk",
     "Aveum",
+    "donotpresent",
     "ESOP",
+    "fseventsd",
+    "Geotools",
     "Glassfish",
+    "icns",
     "jakartaee",
     "Kalispell",
+    "Katz",
     "NOFORN",
     "overfit",
+    "Ph.D.",
+    "Premisis",
     "Qgis",
     "Quaerite",
     "Quarkus",
+    "RDBMS",
     "Sapientia",
     "SDLC",
-    "Zalag"
+    "Shapefile",
+    "timemachine",
+    "Vertx",
+    "Zalag",
+    "Zcash"
   ],
   "[markdown]": {
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "MD024": false
   }
 }
