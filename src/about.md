@@ -1,16 +1,20 @@
-# [Dennis R. Gesker](https://linkedin.com/in/gesker)
+# [Dennis R. Gesker](https://dennis.gesker.com)
 
 ## Technology Executive
 
-### Professional Focus: Teams, Tech, Tools & Timing
+---
+
+---
+
+**Professional Focus**: Teams, Tech, Tools & Timing
+
+{{#include core_compentencies.md}}
+{{#include foundational_technologies.md}}
+{{#include profile.md}}
 
 ## Background
 
 Having 30 years of experience in the information technology field Dennis is proficient in a number of core technologies covering the scope of the Open Systems Interconnection Model; OSI Model.
-
-## Technology Proficiency (Core)
-
-IT Strategy ᐧ Project Management ᐧ Team Leadership ᐧ Technical Staff Development ᐧ Software Development Life Cycle (SDLC) ᐧ Agile & Waterfall ᐧ Enterprise Architecture ᐧ Microsoft Dynamics ᐧ System Administration ᐧ Linux ᐧ Windows Server ᐧ Kubernetes ᐧ Docker ᐧ Podman ᐧ DevOps ᐧ Blockchain & Cryptocurrency ᐧ SQL ᐧ Postgresql ᐧ MySql ᐧ MS-SQL ᐧ NoSql ᐧ MongoDb ᐧ DynamoDb ᐧ AWS ᐧ Java ᐧ Jakarta EE ᐧ Quarkus ᐧ Spring Boot ᐧ GIS ᐧ GeoTools ᐧ Qgis ᐧ SVN ᐧ Maven ᐧ GIT ᐧ Ansible ᐧ Terraform ᐧ DevOps ᐧ Cloud
 
 ## Technology Portfolio
 

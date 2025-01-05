@@ -16,63 +16,11 @@ Possesses a well-balanced skill set which includes business operations, systems 
 | Information and Knowledge Management | Enterprise & Software Architecture |
 | Technology Management and Assessment | Technical Staff Training & Development |
 
-**EDUCATION**
 
-**University of Pittsburgh, Pittsburgh, Pennsylvania**  
-**Katz Graduate School of Business:** Masters in Business Administration (MBA)  
-**Curriculum Track:** Finance / Valuation  
-**Graduated:** 2001
-
-**University of Pittsburgh, Pittsburgh, Pennsylvania**  
-**Katz Graduate School of Business:** Masters in Management Information Systems (MS-MIS)  
-**Curriculum Track:** Software and Database Development  
-**Graduated:** 2001
 
 **PROFESSIONAL**
 
-**Candela Global, LLC, Three Forks, Montana**  
-**Founder:** Sept 2021 – Present
 
-* Systems Architecture and Modernization  
-  * Microservices  
-    * Quarkus, Rust, Kubernetes  
-  * Monolith to Microservices Migration  
-    * Java/Jakarta EE to Quarkus / Apache Kafka  
-    * Spring Boot to Quarkus (Vertx)  
-    * Python to Rust  
-  * RDBMS / DocumentDb  
-    * Transform Oracle (On Prem) to Postgresql (Cloud)  
-    * MySql and MongoDb to Surreal Db  
-  * Cloud and Cloud Native  
-    * Migrate AWS to Linode  
-    * Establish Greenfield Backend in Azure  
-* Machine Learning  
-  * Migrate Python Routines (Tensorflow) to Rust  
-  * Analyze and mitigate model overfit  
-  * DNA Identity Validation  
-    * Deoxyribonucleic Acid Information System  
-* CI/CD Pipelines  
-  * Terraform, Ansible, OpenTofu, Jenkins  
-  * NixOS  
-* Establish and Prepare Private Transport Layer Security (TLS) Authority Systems  
-  * Proprietary Biometric Backed TLS   
-* Mobile Applications  
-  * Migrate Java Script Applications to Flutter  
-  * Migrate REST Backend  
-    * Streamline REST endpoints  
-    * Implement gRPC and GraphQL endpoints  
-* Blockchain & RDBMS Integration  
-  * Zcash  
-* Startup Support  
-  * Cost Control \- Cloud Spend  
-  * Budget Preparation  
-  * CapEx & Depreciation Planning  
-  * GIS Routine Validation  
-    * ArcGIS  
-    * Geotools & PostGIS  
-  * Business Plan Preparation  
-  * Pitch Deck Preparation  
-    * Y-Combinator, ExxonMobil
 
 **Alamon, Inc., Kalispell, Montana**  
 **Chief Technology Officer:** July 2018 – August 2021
