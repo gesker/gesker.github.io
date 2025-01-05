@@ -1,16 +1,18 @@
-# About
+# [Dennis R. Gesker](https://linkedin.com/in/gesker)
 
-[Dennis R. Gesker](https://linkedin.com/in/gesker) is a technology executive based in [Montana](https://en.wikipedia.org/wiki/Montana), [USA](https://en.wikipedia.org/wiki/United_States).
+## Technology Executive
 
+### Professional Focus: Teams, Tech, Tools & Timing
 
-### Background
+## Background
 
-Having 30 years of experience in the information technology field Dennis is proficient in a number of core technologies covering the scope of the Open Systems Interconnection Model; OSI Model. 
+Having 30 years of experience in the information technology field Dennis is proficient in a number of core technologies covering the scope of the Open Systems Interconnection Model; OSI Model.
 
-More simply put Dennis supports the entire technology stack from hardware through to end user facing software systems including cloud systems design and security implementation strategies.
+## Technology Proficiency (Core)
 
+IT Strategy ᐧ Project Management ᐧ Team Leadership ᐧ Technical Staff Development ᐧ Software Development Life Cycle (SDLC) ᐧ Agile & Waterfall ᐧ Enterprise Architecture ᐧ Microsoft Dynamics ᐧ System Administration ᐧ Linux ᐧ Windows Server ᐧ Kubernetes ᐧ Docker ᐧ Podman ᐧ DevOps ᐧ Blockchain & Cryptocurrency ᐧ SQL ᐧ Postgresql ᐧ MySql ᐧ MS-SQL ᐧ NoSql ᐧ MongoDb ᐧ DynamoDb ᐧ AWS ᐧ Java ᐧ Jakarta EE ᐧ Quarkus ᐧ Spring Boot ᐧ GIS ᐧ GeoTools ᐧ Qgis ᐧ SVN ᐧ Maven ᐧ GIT ᐧ Ansible ᐧ Terraform ᐧ DevOps ᐧ Cloud
 
-### Technology Portfolio
+## Technology Portfolio
 
 Candela Global is primarily a holding company for technologies developed by Dennis, his associates and clients.
 
@@ -26,23 +28,10 @@ the [K3s](https://k3s.io/) implementation of [Kubernetes](https://kubernetes.io/
 ### Current Activities
 
 Dennis is presently engaged in supporting [Aveum Systems, Inc.](https://www.aveumsystems.com/) in formulating their
-technological roadmap for developing massively scalable [DNA](https://en.wikipedia.org/wiki/DNA) information systems and
+technological road map for developing massively scalable [DNA](https://en.wikipedia.org/wiki/DNA) information systems and
 related technologies which will enable the construction of identity systems that are hyper-secure, cryptographically
 rigorous, [AI](https://en.wikipedia.org/wiki/Artificial_intelligence)/[ML](https://en.wikipedia.org/wiki/Machine_learning)
 backed and are at the same time AI resistant.
 
 Aveum Systems, Inc. is a Delaware Corporation operating in the US and Europe targeting pilot programs in Africa and
 the [Kingdom of Saudi Arabia](https://houseofsaud.com/).
-
-
-## Trademarks
-
-
-| **Quaerite Lux et Sapientia**                               |
-|-------------------------------------------------------------|
-| ![Zalag Logo](images/zalag_square_match_512x512_frappe.png) |
-
-```admonish note
-**Zalag Logo** © 2020 Dennis R. Gesker. All Rights Reserved.\
-**Zalag Logo**™ a registered trademark. All Right Reserved.
-```
