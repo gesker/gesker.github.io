@@ -1,6 +1,7 @@
 ## [Alamon, Inc., Kalispell, Montana](https://alamon.com)
 
 ---
+
 ---
 
 **Chief Technology Officer**: July 2018 – August 2021

@@ -1,4 +1,8 @@
-# Professional Organizations
+## Professional Organizations
+
+---
+
+---
 
 - [Jakarta EE Ambassadors](https://jakartaee-ambassadors.io)
   - Leadership Council

@@ -8,6 +8,7 @@
 [Professional History](./professional.md)
 [Awards](./awards.md)
 [Education](./education.md)
+[Training and Certifications](./certifications.md)
 [Professional Organizations](./organizations.md)
 [Patents Pending](./patents_pending.md)
 [Trademarks](./trademarks.md)

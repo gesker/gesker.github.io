@@ -1,4 +1,7 @@
 ## [Alamon, Inc., Kalispell, Montana](https://alamon.com)
+
+---
+
 ---
 
 **Operations Manager: Information Technology**: March 2012 – June 2018
