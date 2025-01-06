@@ -1,4 +1,4 @@
-# Trademarks
+# [Trademarks](https://uspto.gov)
 
 | **Quaerite Lux et Sapientia**                               |
 | ----------------------------------------------------------- |

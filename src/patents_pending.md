@@ -1,4 +1,7 @@
-# Patents Pending
+# [Patents Pending](https://uspto.gov)
+
+---
+---
 
 ## Systems and Methods for Distributed Blockchain Monitoring and Inherent Latency Compensation
 

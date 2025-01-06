@@ -1,137 +1,8 @@
-**PROFESSIONAL FOCUS**
-
-Teams  ᐧ  Technology  ᐧ  Tools  ᐧ  Timing
-
-**PROFESSIONAL PROFILE**
-
-Possesses a well-balanced skill set which includes business operations, systems analysis and information technology. This skill set is supported by strong communication skills and knowledge of numerous tools, techniques and analytical frameworks in both the financial and technical arenas. Consistently demonstrates initiative, flexibility and agility in support of financial reporting, operations, marketing and strategic diversification efforts within the particularly competitive telecommunications and data center contracting industry. Regularly leverages programming and application design capabilities in the development of new products and maintenance and feature enhancement of legacy applications. Additionally, displays understanding of the importance of both service and adaptability to new environments by fulfilling an overseas assignment as a member of the US Foreign Service.
-
-**CORE COMPETENCIES**
-
-|  Leadership and Human Capital Management | Process and Change Management |
-| :---- | :---- |
-| Information Resource Strategy and Management | IT Performance Assessment |
-| IT Project and Program Management | Capital Planning and Investment Control |
-| Acquisition & Organization Integration | Cybersecurity/Information Assurance (IA) |
-| Information and Knowledge Management | Enterprise & Software Architecture |
-| Technology Management and Assessment | Technical Staff Training & Development |
 
 
 
-**PROFESSIONAL**
 
 
-
-**Alamon, Inc., Kalispell, Montana**  
-**Chief Technology Officer:** July 2018 – August 2021
-
-* Work with Executive Management  
-  * Grow company leveraging technological resources  
-  * Achieve strategic goals as defined in the firm’s strategic plan  
-  * Ensure continuity of technical operations   
-* Direct and Oversee Employees  
-  * Technology Development & Technology Support Teams  
-  * Technical Employee Development  
-* Define and represent the firm’s technological agenda  
-  * Identify digital marketing opportunities  
-  * Implement design and action plans  
-  * Spearhead IT projects  
-  * Determine Appropriate Technologies for Efforts  
-    * Monolithic, Microservices, RDBMS, Document Databases  
-* Maintain firm’s technical knowledge base  
-  * Technology Landscape and Industry Developments  
-  * Employee Base Education  
-  * Security Threats and Subsequent Risk Mitigation
-
-**Alamon, Inc., Kalispell, Montana**  
-**Operations Manager – Information Technology:** March 2012 – June 2018
-
-Sept 2017: Elected Trustee of ESOP Board  
-May 2017: Elected Company Officer; Secretary & Treasurer
-
-* Ensure IT support and communication capabilities of highly mobile workforce (37 States in 2017\)  
-* Architect and Design for Enterprise Applications  
-* Project Management and oversight of SDLC using Agile, Kanban methodologies.   
-  * Full Stack Java EE Development  
-  * SQL Modeling and Normalization  
-  * Manage software development team and IT systems and support personnel  
-  * Accelerate knowledge base and capabilities of junior developers and administrative support teams  
-  * Define and Prepare Project Objectives, Design Documents and Budgets  
-* Prepare Specifications, NDAs and RFPs for Outsourced Development Efforts  
-* Achieved significant cost reduction by building in house employee Payroll and HR portal  
-* Reduced project analysis time \--Project analysis, Real Time Revenue Recognition Estimates  
-* Recruiting and New Team Member Onboarding
-
-**United States Embassy, Rome, Italy**  
-**United States Department of State**  
-**Information Management Specialist:** September 2010 – February 2012
-
-* Information Management Specialists (IMS) manage and operate worldwide information technology infrastructure, including PC local and wide area networks, telecommunications systems, telephone and UHF/VHF programs, and diplomatic pouch and mail services  
-* Ensure proper dissemination of official classified and unclassified telegraphic traffic   
-* Embassy lead on dissemination rule optimization for State Messaging and Archive Retrieval Toolset  
-* As Technological Platform/Chassi Role Provide Support for Resident Agency Personnel At Post  
-  * SIPRNet, NIPRNet, SMART, SAVANT, VIPRE, KPS, TMAP, CHRONOS, AD content transfer, etc.  
-* Perform system administration of classified local area network (ClassNet)  
-  * Ensure network software and hardware meet DoS baselines  
-  * Ensure compliance with Diplomatic Security (DS)   
-* Provide operational assistance and direct training to users  
-* Create and maintain various Information Processing Center (IPC) Standard Operating Procedures (SOPs)  
-* Serve, on a rotating basis, as duty officer providing 24-hour on-call availability for high precedence telegrams and integrity of post communications systems and circuits  
-* Maintain and test emergency communications equipment including alternate route and High Frequency (HF) radios  
-* Safeguard, account for, and properly dispose of classified equipment and material (including cryptographic) in conformance with all agency IRM and DS standards  
-* Ensure maintenance and accuracy of information technology inventory including use of the Integrated Logistics Management System (ILMS)
-
-**Alamon, Inc., Kalispell, Montana**  
-**Manager – Special Project:** September 1996 – September 2010
-
-* Developed Method of Procedure for Telecommunications (Pole) asset infrastructure and inspections based on RUS standards. Developed supporting survey collection application using GeoAge FAST (running on Microsoft ME platform) and back end file processing including record import, verification & reporting application using Java SE, Java EE and MS-SQL technologies.  
-* Trustee and member of the company's Retirement Plan Investment Committee. Committee/team provides oversight and direction for transition of the company's pooled profit sharing plan to employee self-directed plan which is 401(k) addition ready.  
-* Provided research and conceptual design services in support of grant application ($25M) to FCC for construction of private medical fiber optic network. $14M awarded to date in the pre-engineering stage.  
-* Implemented MS Great Plains Dynamics 6.5 & MS SQL 2000 based accounting system. Update: Deployed subsequent upgrades. Present system is MS-Dynamics GP version 10 & MS-SQL 2008 system.  
-* Designed and implemented TL9000-V R3.0/R3.0 (ISO 9001:2000) Quality Management System resulting in successful certification. Project included in depth process identification, review and redesign in close coordination with top management and operational departments.  
-* Designed Developed web based Database and reporting system using Java technologies (J2SDK 1.4.2, JBoss 3.x J2EE Application Server, JSP, JDBC) which facilitated integrated reporting across several data sources; MS-SQL 2000, MS-Access, PostgreSQL. Update: Upgraded this system to MS-SQL 2008, Java JDK 6, Java EE 5 using JSF, Glassfish & JPA/Toplink. Enhanced application with Swing based client application launched via Java Web Start.
-
-**PROFESSIONAL ACTIVITIES**
-
-Patents Pending
-
-"Systems and Methods for Distributed Blockchain Monitoring and Inherent Latency Compensation"  
-*Patent Application \# 18/323408*  
-*Filed 2023-May-25*
-
-"Systems and Methods for Economic Price Discovery In Social Media Networks Including Games"  
-*Patent Application \# 18/323409*  
-*Filed 2023-May-25*
-
-Publications
-
-"Two Must-Have Tools for Jakarta EE Developers"  
-*InfoQ.com April 2022*
-
-"Enter Jakarta EE: an Inoculation Against Fear, Uncertainty and Doubt in the Java Community"  
-*Linux Journal  \#287 June 2018*
-
-Blog: Challenges and experiences with enterprise grade software systems and supporting components  
-[*http://gesker.wordpress.com*](http://gesker.wordpress.com/)  
-*On-Going*
-
-Introducing the Culture of Free and Open Source Software to the Department of State  
-*Internally Circulated Strategy Paper \-- Department of State (SECRET/NOFORN)*  
-*Department of State*  
-*November 2010*
-
-JSPWiki/Glassfish Install-18 Part Blog Series  
-[*http://gesker.blogspot.com*](http://gesker.blogspot.com/)  
-*March 2007*
-
-"Migrating to Mozilla Thunderbird"  
-*Sys Admin Volume 14 \#6 June 2005*
-
-J2EE: A Shotgun Start  
-*Byte.Com January 2003*
-
-Alternatives for Dynamic Web Development  
-*Linux Journal \#83 March 2001*
 
 Activity/Project Specific Professional Development Coursework and Skill Enhancement
 
@@ -149,34 +20,13 @@ Activity/Project Specific Professional Development Coursework and Skill Enhancem
 * YW496    Nortel CallPilot  
 * MQ911   Security Overseas Seminar
 
-Professional Organizations
 
-Member \-- Society of Catholic Scientists
 
-Member \- Eclipse.org
 
-Member \-- Jakarta EE Ambassadors – jakartaee-ambassadors.io
 
-Member \-- Java Community Process (Technology Specification Organization) – jcp.org
 
-Associate Member \-- Institute of Electrical and Electronics Engineers – ieee.org
 
-Member \-- Electronic Frontier Foundation – eff.org
 
-AWARDS
-
-**U.S. Department of State:** Certificate of Appreciation  
-Dedication to Mission 2010 \- 2012  
-*US Embassy Italy*
-
-**U.S. Department of State:** Extra Mile Award  
-Information Management Office 2011-Sept  
-*US Embassy Italy*
-
-**Alamon, Inc.:** President’s Award for Innovation  
-Annual Leadership Conference 2017-Jan  
-*Kalispell, MT*  
-Exceptional Effort and Accomplishment in Innovation in the areas of Information Technology, Software Architecture, Design & Development and Marketing to new Industrie*s*
 
 FAST & HIGH IMPACT PROJECTS
 

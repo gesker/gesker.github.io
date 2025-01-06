@@ -1,4 +1,6 @@
-## Candela Global, LLC, Three Forks, Montana
+## [Candela Global, LLC, Three Forks, Montana](https://candela.global)
+
+---
 
 ---
 
