@@ -109,7 +109,7 @@ The site negates the cost associated with adding additional MS-Dynamics licenses
 
 **Date**: May 2015
 
-QUICKLY built a custom site on the Java EE platform using GlassFish 4.1, JSF (PrimeFaces) and Eclipselink.
+Built a custom site on the Java EE platform using GlassFish 4.1, JSF (PrimeFaces) and Eclipselink.
 
 The site pulls necessary payroll data from the accounting system at the MS-SQL database layer to securely issue weekly payroll information to employees. It also allows administrative staff to publish documents by simply dropping documents into a shared Windows Domain network folder.
 
