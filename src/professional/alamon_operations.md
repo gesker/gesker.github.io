@@ -6,7 +6,7 @@
 
 **Operations Manager: Information Technology**: March 2012 – June 2018
 
-**Sept 2017**: Elected Trustee of ESOP Board
+**Sept 2017**: Elected Trustee of ESOP Board\
 **May 2017**: Elected Company Officer; Secretary & Treasurer
 
 - Achieved significant cost reduction by building in house employee Payroll and HR portal

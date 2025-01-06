@@ -1,6 +1,6 @@
 # dennis.gesker.com
 
-{{#include ./images/profile_picture.md}}
+{{#include images/profile_picture.md}}
 
 ---
 

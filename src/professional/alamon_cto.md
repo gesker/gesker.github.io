@@ -6,7 +6,6 @@
 
 **Chief Technology Officer**: July 2018 – August 2021
 
-
 - Define and represent the firm’s technological agenda
 - [Designed and Developed Mobile Application](https://alatrac.com)
   - Enabled Division recovery
