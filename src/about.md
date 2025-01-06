@@ -1,14 +1,9 @@
-| Dennis R. Gesker                                                                              |
-| --------------------------------------------------------------------------------------------- |
-| <img src="images/profile_picture.jpg" alt="Dennis R. Gesker" style="width:25%; height:auto;"> |
-
-## Technology Executive
-
----
+|                       **Professional Focus**: Teams, Tech, Tools & Timing                       |
+| :---------------------------------------------------------------------------------------------: |
+| <img src="images/profile_picture.jpg" alt="Dennis R. Gesker" style="width:33%; float: center;"> |
+|                                        Dennis R. Gesker                                         |
 
 ---
-
-**Professional Focus**: Teams, Tech, Tools & Timing
 
 {{#include core_competencies.md}}
 {{#include foundational_technologies.md}}
