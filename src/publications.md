@@ -10,21 +10,15 @@
 
 ---
 
----
-
 ## [Enter Jakarta EE: an Inoculation Against Fear, Uncertainty and Doubt in the Java Community](https://www.linuxjournal.com/content/enter-jakarta-ee-inoculation-against-fear-uncertainty-and-doubt-java-community)
 
 ### [Linux Journal No. 287](https://www.linuxjournal.com/users/dennis-gesker) June 2018
 
 ---
 
----
-
 ## Blog: Challenges and experiences with enterprise grade software systems and supporting components
 
 ### [WordPress](https://gesker.wordpress.com) \- On-Going
-
----
 
 ---
 
@@ -36,13 +30,9 @@ _[Department of State](https://state.gov) \- November 2010_
 
 ---
 
----
-
 ## [JSPWiki/Glassfish Install-18 Part Blog Series](https://gesker.wordpress.com/2007/03/08/jspwikiglassfish-install-part-1-of-18-description/)
 
 ### [http://gesker.blogspot.com](https://gesker.wordpress.com/2007/03/08/jspwikiglassfish-install-part-1-of-18-description/) \- March 2007
-
----
 
 ---
 
@@ -52,13 +42,9 @@ _[Department of State](https://state.gov) \- November 2010_
 
 ---
 
----
-
 ## J2EE: A Shotgun Start
 
 ### Byte.Com - January 2003
-
----
 
 ---
 

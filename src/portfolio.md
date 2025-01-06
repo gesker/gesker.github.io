@@ -4,7 +4,13 @@
 
 ---
 
+### Candela Global, LLC
+
+---
+
 Candela Global is the vehicle for most of Dennis' current activities. Candela Global is not an operating company and is primarily a holding company for technologies developed by Dennis, his partners and associates, clients and a number of volunteer efforts.
+
+### Intellectual Property
 
 ---
 
