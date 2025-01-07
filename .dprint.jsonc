@@ -1,15 +1,12 @@
 {
   "$schema": "https://dprint.dev/schemas/v0.json",
   "excludes": [
-    "**/*.bak",
-    "**/*.bak2",
-    ".direnv/",
+    ".crossnote/",
     ".idea/",
-    "**/anyrun/style.css",
-    "**/waybar/style.css",
-    "**/waybar/style2.css",
-    "**/supabase/tmp.yml",
-    "**/*.sops.yaml"
+    "**/*.css",
+    "**/*.hbs",
+    "**/*.js",
+    "theme/"
   ],
   "plugins": [
     "https://plugins.dprint.dev/dockerfile-0.3.2.wasm",
@@ -27,39 +24,7 @@
     "https://plugins.dprint.dev/toml-0.6.2.wasm",
     "https://plugins.dprint.dev/typescript-0.93.0.wasm"
   ],
-  "exec": {
-    "cwd": "${configDir}",
-    "lineWidth": 120,
-    "indentWidth": 2,
-    "useTabs": false,
-    "cacheKey": "1",
-    "timeout": 60,
 
-    "commands": [
-      // {
-      //   "command": "nixpkgs-fmt",
-      //   "exts": ["nix"]
-      // },
-
-      {
-        "command": "rustfmt",
-        "exts": ["rs"]
-      },
-      {
-        "command": "java -jar formatter.jar {{file_path}}",
-        "exts": ["java"]
-      },
-      {
-        "command": "yapf",
-        "exts": ["py"]
-      },
-      {
-        "command": "prettier --stdin-filepath {{file_path}} --tab-width {{indent_width}} --print-width {{line_width}}",
-        // add more extensions that prettier should format
-        "exts": ["js", "ts", "html"]
-      }
-    ]
-  },
   "prettier": {
     "plugins": [
       "@prettier/plugin-xml",

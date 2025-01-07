@@ -7,28 +7,25 @@ About Dennis R. Gesker
 mdbook project to create an about page.
 mdbook build to create html
 
-A gitaction has been created to build and deploy the gitpages
+A git action has been created to build and deploy the git pages
 
 ### MdBook Local Development
 
 To watch and server on localhost port 3000 as you are editing md files:
 
-```
+```bash
 mdbook serve --open
 ```
 
 ### Extra Plugins Used
 
-- [mdbook-catppuccin](https://github.com/catppuccin/mdBook)
 - [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish)
 - [mdbook-mermaid](https://github.com/badboy/mdbook-mermaid)
-
 
 ## DNS
 
 dennis.gesker.com is CNAME to gesker.github.io
 <www.gesker.com> is a server side redirect to dennis.gesker.com
-
 
 ## Zalag Logo
 

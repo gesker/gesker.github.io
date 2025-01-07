@@ -7,15 +7,14 @@ text-diretion = "ltr"
 multilingual = false
 src = "src"
 
-
 [build]
-build-dir = "book"                # the directory where the output is placed
-create-missing = true             # whether or not to create missing pages
-use-default-preprocessors = true  # use the default preprocessors
-extra-watch-dirs = []             # directories to watch for triggering builds
+build-dir = "book" # the directory where the output is placed
+create-missing = true # whether or not to create missing pages
+use-default-preprocessors = true # use the default preprocessors
+extra-watch-dirs = [] # directories to watch for triggering builds
 
 [output.html]
-#theme = "my-custom-theme"
+# theme = "my-custom-theme"
 default-theme = "frappe"
 preferred-dark-theme = "frappe"
 # curly-quotes = true
@@ -29,7 +28,12 @@ git-repository-url = "https://github.com/gesker/gesker.github.io"
 # edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
 # site-url = "/example-book/"
 cname = "dennis.gesker.com"
-additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-admonish.css", "./theme/my.css" , "./theme/mdbook-admonish.css"]
+additional-css = [
+  "./theme/catppuccin.css",
+  "./theme/catppuccin-admonish.css",
+  "./theme/my.css",
+  "./theme/mdbook-admonish.css",
+]
 additional-js = ["./theme/mermaid.min.js", "./theme/mermaid-init.js"]
 # input-404 = "not-found.md"
 
@@ -38,28 +42,28 @@ additional-js = ["./theme/mermaid.min.js", "./theme/mermaid-init.js"]
 # level = 0         # the depth to start folding
 
 [output.html.playground]
-editable = false         # allows editing the source code
-copyable = false          # include the copy button for copying code snippets
-copy-js = false           # includes the JavaScript for the code editor
-line-numbers = false     # displays line numbers for editable code
-runnable = false          # displays a run button for rust code
+editable = false # allows editing the source code
+copyable = false # include the copy button for copying code snippets
+copy-js = false # includes the JavaScript for the code editor
+line-numbers = false # displays line numbers for editable code
+runnable = false # displays a run button for rust code
 
 [output.html.code]
 # A prefix string per language (one or more chars).
 # Any line starting with whitespace+prefix is hidden.
-#hidelines = { python = "~" }
+# hidelines = { python = "~" }
 
 [output.html.search]
-enable = true            # enables the search feature
-limit-results = 30       # maximum number of search results
-teaser-word-count = 30   # number of words used for a search result teaser
-use-boolean-and = true   # multiple search terms must all match
-boost-title = 2          # ranking boost factor for matches in headers
-boost-hierarchy = 1      # ranking boost factor for matches in page names
-boost-paragraph = 1      # ranking boost factor for matches in text
-expand = true            # partial words will match longer terms
-heading-split-level = 3  # link results to heading levels
-copy-js = true           # include Javascript code for search
+enable = true # enables the search feature
+limit-results = 30 # maximum number of search results
+teaser-word-count = 30 # number of words used for a search result teaser
+use-boolean-and = true # multiple search terms must all match
+boost-title = 2 # ranking boost factor for matches in headers
+boost-hierarchy = 1 # ranking boost factor for matches in page names
+boost-paragraph = 1 # ranking boost factor for matches in text
+expand = true # partial words will match longer terms
+heading-split-level = 3 # link results to heading levels
+copy-js = true # include Javascript code for search
 
 [preprocessor]
 
