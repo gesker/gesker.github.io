@@ -1,4 +1,4 @@
-## [Alamon, Inc., Kalispell, Montana](https://alamon.com)
+### [Alamon, Inc., Kalispell, Montana](https://alamon.com)
 
 <img src="images/alamon_logo.png" alt="alamon_Logo" style="width:10%; float: right;">
 

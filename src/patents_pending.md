@@ -1,4 +1,4 @@
-### [Patents Pending](https://uspto.gov)
+## [Patents Pending](https://uspto.gov)
 
 <img src="images/uspto_logo.png" alt="USPTO_Logo" style="width:10%; float: right;">
 

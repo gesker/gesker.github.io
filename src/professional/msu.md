@@ -1,4 +1,4 @@
-## [Montana State University, Bozeman, Montana](https://www.montana.edu)
+### [Montana State University, Bozeman, Montana](https://www.montana.edu)
 
 <img src="images/msu_logo.png" alt="msu_logo" style="width:10%; float: right;">
 
