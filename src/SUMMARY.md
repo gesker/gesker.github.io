@@ -16,4 +16,6 @@
 - [Education](./education.md)
   - [Training and Certifications](./certifications.md)
 
+---
+
 [Resume Full](resume_full.md)
