@@ -1,5 +1,7 @@
 ## [Candela Global, LLC, Three Forks, Montana](https://candela.global)
 
+<img src="images/candela_logo.png" alt="candela_Logo" style="width:10%; float: right;">
+
 ---
 
 ---

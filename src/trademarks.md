@@ -1,12 +1,16 @@
-## [Trademarks](https://uspto.gov)
+### [Trademarks](https://uspto.gov)
+
+<img src="images/uspto_logo.png" alt="USPTO_Logo" style="width:10%; float: right;">
 
 ---
 
 ---
 
-| **Quaerite Lux et Sapientia**                               |
-| ----------------------------------------------------------- |
-| ![Zalag Logo](images/zalag_square_match_512x512_frappe.png) |
+<br>
+
+|                  **Quaerite Lux et Sapientia**                   |
+| :--------------------------------------------------------------: |
+| <br> ![Zalag Logo](images/zalag_square_match_100x100_frappe.png) |
 
 ```admonish note
 **Zalag Logo** © 2020 Dennis R. Gesker. All Rights Reserved.\

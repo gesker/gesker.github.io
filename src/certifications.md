@@ -4,7 +4,11 @@
 
 ---
 
-Activity/Project Specific Professional Development Coursework and Skill Enhancement
+### Foreign Service Institute
+
+<img src="images/fsi_logo.png" alt="fsi_Logo" style="width:10%; float: right;">
+
+---
 
 - PN106 Orientation \- Foreign Service Specialist
 - PS380 Introduction to Information Resource Management
@@ -14,8 +18,8 @@ Activity/Project Specific Professional Development Coursework and Skill Enhancem
 - YW278 Citrix Metaframe Presentation Server Admin (Earned Citrix Administrator Certificate)
 - YW302 FASTNet Post Operation and Maintenance
 - YW268 UHF/VHF Emergency and Evacuation
-- YW142 Basic Telephone \-- Nortel/Avaya Norstar Key System Programming
-- YW286	 Simulated Operations
-- YW497	 Nortel/Avaya Meridian 61C/11C
+- YW142 Basic Telephone \- Nortel/Avaya Norstar Key System Programming
+- YW286 Simulated Operations
+- YW497 Nortel/Avaya Meridian 61C/11C
 - YW496 Nortel CallPilot
 - MQ911 Security Overseas Seminar

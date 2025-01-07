@@ -6,6 +6,8 @@
 
 ### [Aveum Systems](https://www.aveumsystems.com) \- DNA Based ID and Tracking System
 
+<img src="images/aveum_logo.png" alt="Aveum_Logo" style="width:10%; float: right;">
+
 ---
 
 **Date**: Spring 2024
@@ -20,6 +22,8 @@ Aveum Systems, Inc. is a Delaware Corporation operating in the US and Europe tar
 the [Kingdom of Saudi Arabia](https://houseofsaud.com/).
 
 ### [AlaTrac](https://alatrac.com) \- Monetize & Market Ready
+
+<img src="images/alatrac_logo.png" alt="Alatrac_Logo" style="width:10%; float: right;">
 
 ---
 
