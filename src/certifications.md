@@ -4,6 +4,11 @@
 
 ---
 
+### Techstrong
+
+- Evolution of Transactional Databases
+  - 2023-Jan
+
 ### Foreign Service Institute
 
 <img src="images/fsi_logo.png" alt="fsi_Logo" style="width:10%; float: right;">
