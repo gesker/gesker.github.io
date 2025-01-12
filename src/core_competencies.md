@@ -4,9 +4,10 @@
 
 ---
 
-| **Leadership and Human Capital Management**  | **Process and Change Management**        |
+|                                              |                                          |
 | :------------------------------------------- | :--------------------------------------- |
 | <br>                                         | <br>                                     |
+| Leadership and Human Capital Management      | Process and Change Management            |
 | Information Resource Strategy and Management | IT Performance Assessment                |
 | IT Project and Program Management            | Capital Planning and Investment Control  |
 | Acquisition & Organization Integration       | Cybersecurity/Information Assurance (IA) |

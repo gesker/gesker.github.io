@@ -1,14 +1,6 @@
 # Dennis R. Gesker
 
-Lake Oswego, Oregon, USA\
-+1202783202
-
----
-
----
-
-<img src="images/candela_logo.png" alt="candela_logo" style="width:10%; float: right;">
-
+{{#include address.md}}
 {{#include core_competencies.md}}
 {{#include foundational_technologies.md}}
 {{#include background.md}}

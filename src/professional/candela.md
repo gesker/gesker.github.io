@@ -1,4 +1,4 @@
-### [Candela Global, LLC, Three Forks, Montana](https://candela.global)
+### [Candela Global, LLC, Portland, Oregon](https://candela.global)
 
 <img src="images/candela_logo.png" alt="candela_Logo" style="width:10%; float: right;">
 
@@ -6,7 +6,7 @@
 
 ---
 
-**Independent Contractor**: Sept 2021 – Present
+**Independent Contractor**: January 2022 – Present
 
 - [US Patent Preparation](../patents_pending.md)
 - Systems Architecture and Modernization

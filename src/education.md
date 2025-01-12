@@ -42,7 +42,7 @@ _Bachelors of Science (Health Science)_\
 
 ---
 
-**Go, Lancer!**\
+**Go, Lancers!**\
 _High School Diploma_\
 **Curriculum Track**: Academic\
 **Graduated**: 1991
