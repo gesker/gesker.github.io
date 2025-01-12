@@ -4,7 +4,7 @@
 
 ---
 
-### Techstrong
+### TechStrong
 
 - Evolution of Transactional Databases
   - 2023-Jan

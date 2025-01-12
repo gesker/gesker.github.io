@@ -40,6 +40,7 @@ jobs:
           cargo install mdbook-admonish
           mdbook-admonish install --css-dir ./theme .
           cargo install mdbook-mermaid
+          cargo install mdbook-pdf
           mdbook-mermaid install
       - name: Setup Pages
         id: pages
