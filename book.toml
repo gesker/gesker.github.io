@@ -1,10 +1,11 @@
 [book]
+src = "src"
 title = "Dennis Gesker"
 description = "Home Page of Dennis Gesker"
 authors = ["Dennis Gesker"]
-language = "en"
 multilingual = false
-src = "src"
+language = "en"
+text-direction = "ltr"
 
 [build]
 build-dir = "book" # the directory where the output is placed
@@ -12,20 +13,13 @@ create-missing = true # whether or not to create missing pages
 use-default-preprocessors = true # use the default preprocessors
 extra-watch-dirs = [] # directories to watch for triggering builds
 
+[output.pdf]
+
 [output.html]
-# theme = "my-custom-theme"
 default-theme = "frappe"
 preferred-dark-theme = "frappe"
-# curly-quotes = true
-# mathjax-support = false
-# copy-fonts = true
-# additional-css = ["custom.css", "custom2.css"]
-# additional-js = ["custom.js"]
 no-section-label = false
 git-repository-url = "https://github.com/gesker"
-# git-repository-icon = "fa-github"
-# edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
-# site-url = "/example-book/"
 cname = "dennis.gesker.com"
 additional-css = [
   "./theme/catppuccin.css",
