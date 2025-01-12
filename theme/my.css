@@ -1,6 +1,5 @@
 .frappe .menu-title {
     display: inline-block;
-    #font-weight: 200;
     font-size: 2.4rem;
     line-height: var(--menu-bar-height);
     text-align: center;
@@ -15,7 +14,6 @@
 
 .latte .menu-title {
     display: inline-block;
-    #font-weight: 200;
     font-size: 2.4rem;
     line-height: var(--menu-bar-height);
     text-align: center;
@@ -30,7 +28,6 @@
 
 .mocha .menu-title {
     display: inline-block;
-    #font-weight: 200;
     font-size: 2.4rem;
     line-height: var(--menu-bar-height);
     text-align: center;
@@ -45,7 +42,6 @@
 
 .macchiato .menu-title {
     display: inline-block;
-    #font-weight: 200;
     font-size: 2.4rem;
     line-height: var(--menu-bar-height);
     text-align: center;

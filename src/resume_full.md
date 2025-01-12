@@ -1,5 +1,3 @@
-# Dennis R. Gesker
-
 {{#include address.md}}
 {{#include core_competencies.md}}
 {{#include foundational_technologies.md}}

@@ -1,6 +1,6 @@
 [book]
 src = "src"
-title = "Dennis Gesker"
+# title = "Dennis Gesker"
 description = "Home Page of Dennis Gesker"
 authors = ["Dennis Gesker"]
 multilingual = false
@@ -13,7 +13,7 @@ create-missing = true # whether or not to create missing pages
 use-default-preprocessors = true # use the default preprocessors
 extra-watch-dirs = [] # directories to watch for triggering builds
 
-# [output.pdf]
+[output.pdf]
 
 [output.html]
 default-theme = "frappe"
@@ -26,6 +26,7 @@ additional-css = [
   "./theme/catppuccin-admonish.css",
   "./theme/my.css",
   "./theme/mdbook-admonish.css",
+  "theme/google-doc.css",
 ]
 additional-js = ["./theme/mermaid.min.js", "./theme/mermaid-init.js"]
 # input-404 = "not-found.md"
@@ -58,6 +59,8 @@ expand = true # partial words will match longer terms
 heading-split-level = 3 # link results to heading levels
 copy-js = true # include Javascript code for search
 
+[output.linkcheck]
+
 [preprocessor]
 
 [preprocessor.admonish]
@@ -71,3 +74,5 @@ command = "mdbook-mermaid"
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
+
+[preprocessor.footnote]

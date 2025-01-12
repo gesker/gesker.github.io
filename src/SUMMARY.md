@@ -16,5 +16,7 @@
 
 ---
 
+---
+
 [Resume Short](resume_short.md)
-[Resume Full](resume_full.md)|
+[Resume Full](resume_full.md)

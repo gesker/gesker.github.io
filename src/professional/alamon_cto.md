@@ -12,7 +12,7 @@
 - [Designed and Developed Mobile Application](https://alatrac.com)
   - Enabled Division recovery
     - $330,000 Loss 2018
-    - $3M Net Profit by 2020
+    - $3M Net Profit by 2021
   - GIS Enabled Android System using AWS as Backend
     - Includes GIS Data export/import/validation
       - ArcGIS, Windmill, PostGIS, qGIS
