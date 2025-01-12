@@ -4,7 +4,7 @@
 
 ---
 
-[Resume Full](./resume_full.md)
+**Resume**: [Full](./resume_full.md) ᐧ [Short](./resume_short.md)
 
 {{#include core_competencies.md}}
 {{#include foundational_technologies.md}}

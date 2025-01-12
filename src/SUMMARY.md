@@ -1,5 +1,3 @@
-# Summary
-
 - [Welcome](./about.md)
 - [Core Competencies](./core_competencies.md)
 - [Foundational Technologies](./foundational_technologies.md)
@@ -18,4 +16,5 @@
 
 ---
 
-[Resume Short](resume_short.md) |[Resume Full](resume_full.md)|
+[Resume Short](resume_short.md)
+[Resume Full](resume_full.md)|
