@@ -87,7 +87,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Mdbook Build
         id: mdbook-build
-        run: mdbook build
+        run: mdbook build book
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
