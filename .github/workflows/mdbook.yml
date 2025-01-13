@@ -29,12 +29,12 @@ jobs:
       - name: Checkout repository
         id: checkout
         uses: actions/checkout@v4
-      - name: Install rust toolchain
-        id: rust-toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: stable
+      # - name: Install rust toolchain
+      #   id: rust-toolchain
+      #   uses: actions-rs/toolchain@v1
+      #   with:
+      #     profile: minimal
+      #     toolchain: stable
       - name: Install mdbook
         id: mdbook-install
         uses: taiki-e/cache-cargo-install-action@v2
@@ -78,7 +78,8 @@ jobs:
       #     path: |
       #       ~/.cargo/registry
       #       ~/.cargo/git
-      #       target
+      #       target[output.linkcheck]
+      # follow-web-links = false
       #     key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
       - name: Configure Pages
