@@ -34,12 +34,19 @@ jobs:
           toolchain: stable
       - uses: taiki-e/cache-cargo-install-action@v2
         with:
-          locked: true
           tool: mdbook@0.4.40
       - uses: taiki-e/cache-cargo-install-action@v2
         with:
-          locked: true
-          tool: mdbook-admonish@1.18.0
+          tool: mdbook-admonish
+      - uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-linkcheck
+      - uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-pdf
+      - uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-toc
       - uses: actions/cache@v2
         with:
           path: |
