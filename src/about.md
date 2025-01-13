@@ -13,5 +13,4 @@
 {{#include core_competencies.md}}
 {{#include foundational_technologies.md}}
 {{#include background.md}}
-{{#include profile.md}}\
-20250114x
+{{#include profile.md}}
