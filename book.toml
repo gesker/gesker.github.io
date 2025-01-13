@@ -16,17 +16,17 @@ extra-watch-dirs = [] # directories to watch for triggering builds
 # [output.pdf]
 
 [output.html]
-default-theme = "frappe"
-preferred-dark-theme = "frappe"
+# default-theme = "latte"
+# preferred-dark-theme = "latte"
 no-section-label = false
 git-repository-url = "https://github.com/gesker"
 cname = "dennis.gesker.com"
 additional-css = [
-  "./theme/catppuccin.css",
-  "./theme/catppuccin-admonish.css",
-  "./theme/my.css",
+  # "./theme/catppuccin.css",
+  # "./theme/catppuccin-admonish.css",
+  # "./theme/my.css",
   "./theme/mdbook-admonish.css",
-  "theme/google-doc.css",
+  # "theme/google-doc.css",
 ]
 additional-js = ["./theme/mermaid.min.js", "./theme/mermaid-init.js"]
 # input-404 = "not-found.md"
