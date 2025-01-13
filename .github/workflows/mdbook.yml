@@ -44,32 +44,32 @@ jobs:
         id: mdbook-admonish-install
         uses: taiki-e/cache-cargo-install-action@v2
         with:
-          tool: mdbook-admonish
-      - name: Install mdbook-linkcheck
-        id: mdbook-linkcheck-install
-        uses: taiki-e/cache-cargo-install-action@v2
-        with:
-          tool: mdbook-linkcheck
-      - name: Install mdbook-pdf
-        id: mdbook-pdf-install
-        uses: taiki-e/cache-cargo-install-action@v2
-        with:
-          tool: mdbook-pdf
-      - name: Install mdbook-toc
-        id: mdbook-toc-install
-        uses: taiki-e/cache-cargo-install-action@v2
-        with:
-          tool: mdbook-toc
-      - name: Install mdbook-mermaid
-        id: mdbook-mermaid-install
-        uses: taiki-e/cache-cargo-install-action@v2
-        with:
-          tool: mdbook-mermaid
-      - name: Install mdbook-footnote
-        id: mdbook-footnote-install
-        uses: taiki-e/cache-cargo-install-action@v2
-        with:
-          tool: mdbook-footnote
+      #     tool: mdbook-admonish
+      # - name: Install mdbook-linkcheck
+      #   id: mdbook-linkcheck-install
+      #   uses: taiki-e/cache-cargo-install-action@v2
+      #   with:
+      #     tool: mdbook-linkcheck
+      # - name: Install mdbook-pdf
+      #   id: mdbook-pdf-install
+      #   uses: taiki-e/cache-cargo-install-action@v2
+      #   with:
+      #     tool: mdbook-pdf
+      # - name: Install mdbook-toc
+      #   id: mdbook-toc-install
+      #   uses: taiki-e/cache-cargo-install-action@v2
+      #   with:
+      #     tool: mdbook-toc
+      # - name: Install mdbook-mermaid
+      #   id: mdbook-mermaid-install
+      #   uses: taiki-e/cache-cargo-install-action@v2
+      #   with:
+      #     tool: mdbook-mermaid
+      # - name: Install mdbook-footnote
+      #   id: mdbook-footnote-install
+      #   uses: taiki-e/cache-cargo-install-action@v2
+      #   with:
+      #     tool: mdbook-footnote
 
       # - name: Cache
       #   id: cache
@@ -91,8 +91,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./book
-      - name: Set output
-        run: echo "{name}={value}" >> $GITHUB_OUTPUT
 
   # Deployment job
   deploy:
