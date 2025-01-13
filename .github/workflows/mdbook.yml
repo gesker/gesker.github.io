@@ -101,6 +101,41 @@ jobs:
     runs-on: ubuntu-24.04
     needs: build
     steps:
+      - name: Install mdbook
+        id: mdbook-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook@0.4.40
+      - name: Install mdbook-admonish
+        id: mdbook-admonish-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-admonish
+      - name: Install mdbook-linkcheck
+        id: mdbook-linkcheck-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-linkcheck
+      - name: Install mdbook-pdf
+        id: mdbook-pdf-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-pdf
+      - name: Install mdbook-toc
+        id: mdbook-toc-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-toc
+      - name: Install mdbook-mermaid
+        id: mdbook-mermaid-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-mermaid
+      - name: Install mdbook-footnote
+        id: mdbook-footnote-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-footnote
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
