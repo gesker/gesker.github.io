@@ -20,6 +20,7 @@ default-theme = "latte"
 preferred-dark-theme = "macchiato"
 no-section-label = false
 git-repository-url = "https://github.com/gesker"
+google-analytics = "G-CCW7P40HZY"
 cname = "dennis.gesker.com"
 additional-css = [
   "./theme/catppuccin.css",
