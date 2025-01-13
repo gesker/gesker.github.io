@@ -32,6 +32,14 @@ jobs:
         with:
           profile: minimal
           toolchain: stable
+      - uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          locked: true
+          tool: mdbook@0.4.40
+      - uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          locked: true
+          tool: mdbook-admonish@1.18.0
       - uses: actions/cache@v2
         with:
           path: |
@@ -40,18 +48,18 @@ jobs:
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      - name: Install mdBook
-        run: |
-          #curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
-          #rustup update
-          cargo install --version ${MDBOOK_VERSION} mdbook
-          cargo install mdbook-admonish --vers "1.18.0" --locked
-          #mdbook-admonish install --css-dir ./theme .
-          # cargo install mdbook-mermaid
-          #mdbook-mermaid install
-          #cargo install mdbook-linkcheck
-          #cargo install mdbook-pdf
-          #cargo install mdbook-toc
+      # - name: Install mdBook
+      #   run: |
+      #     #curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
+      #     #rustup update
+      #     #cargo install --version ${MDBOOK_VERSION} mdbook
+      #     #cargo install mdbook-admonish --vers "1.18.0" --locked
+      #     #mdbook-admonish install --css-dir ./theme .
+      #     # cargo install mdbook-mermaid
+      #     #mdbook-mermaid install
+      #     #cargo install mdbook-linkcheck
+      #     #cargo install mdbook-pdf
+      #     #cargo install mdbook-toc
 
       - name: Setup Pages
         id: pages
