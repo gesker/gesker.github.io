@@ -44,7 +44,7 @@ jobs:
         id: mdbook-admonish-install
         uses: taiki-e/cache-cargo-install-action@v2
         with:
-      #     tool: mdbook-admonish
+          tool: mdbook-admonish
       # - name: Install mdbook-linkcheck
       #   id: mdbook-linkcheck-install
       #   uses: taiki-e/cache-cargo-install-action@v2
