@@ -13,7 +13,7 @@ create-missing = true # whether or not to create missing pages
 use-default-preprocessors = true # use the default preprocessors
 extra-watch-dirs = [] # directories to watch for triggering builds
 
-# [output.pdf]
+[output.pdf]
 
 [output.html]
 default-theme = "latte"
@@ -60,7 +60,8 @@ expand = true # partial words will match longer terms
 heading-split-level = 3 # link results to heading levels
 copy-js = true # include Javascript code for search
 
-# [output.linkcheck]
+[output.linkcheck]
+follow-web-links = false
 
 [preprocessor]
 
@@ -69,11 +70,11 @@ after = ["links"]
 command = "mdbook-admonish"
 assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
-# [preprocessor.mermaid]
-# command = "mdbook-mermaid"
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
 
-# [preprocessor.toc]
-# command = "mdbook-toc"
-# renderer = ["html"]
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
 
-# [preprocessor.footnote]
+[preprocessor.footnote]

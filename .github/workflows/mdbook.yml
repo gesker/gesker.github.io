@@ -60,6 +60,17 @@ jobs:
         uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: mdbook-toc
+      - name: Install mdbook-mermaid
+        id: mdbook-mermaid-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-mermaid
+      - name: Install mdbook-footnote
+        id: mdbook-footnote-install
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-footnote
+
       # - name: Cache
       #   id: cache
       #   uses: actions/cache@v4
