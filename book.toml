@@ -16,7 +16,7 @@ extra-watch-dirs = [] # directories to watch for triggering builds
 # [output.pdf]
 
 [output.html]
-site-url = "https://dennis.gesker.com"
+site-url = "./book"
 use-site-url-as-root = true
 default-theme = "latte"
 preferred-dark-theme = "macchiato"
