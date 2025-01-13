@@ -32,22 +32,34 @@ jobs:
         with:
           profile: minimal
           toolchain: stable
-      - uses: taiki-e/cache-cargo-install-action@v2
+      - name: Install mdbook
+        id: mdbook-install
+        uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: mdbook@0.4.40
-      - uses: taiki-e/cache-cargo-install-action@v2
+      - name: Install mdbook-admonish
+        id: mdbook-admonish-install
+        uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: mdbook-admonish
-      - uses: taiki-e/cache-cargo-install-action@v2
+      - name: Install mdbook-linkcheck
+        id: mdbook-linkcheck-install
+        uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: mdbook-linkcheck
-      - uses: taiki-e/cache-cargo-install-action@v2
+      - name: Install mdbook-pdf
+        id: mdbook-pdf-install
+        uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: mdbook-pdf
-      - uses: taiki-e/cache-cargo-install-action@v2
+      - name: Install mdbook-toc
+        id: mdbook-toc-install
+        uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: mdbook-toc
-      - uses: actions/cache@v2
+      - name: Cache
+        id: cache
+        uses: actions/cache@v2
         with:
           path: |
             ~/.cargo/registry
@@ -68,10 +80,11 @@ jobs:
       #     #cargo install mdbook-pdf
       #     #cargo install mdbook-toc
 
-      - name: Setup Pages
-        id: pages
+      - name: Configure Pages
+        id: configure-pages
         uses: actions/configure-pages@v4
-      - name: Build with mdBook
+      - name: Mdbook Build
+        id: mdbook-build
         run: mdbook build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
