@@ -13,7 +13,7 @@ create-missing = true # whether or not to create missing pages
 use-default-preprocessors = true # use the default preprocessors
 extra-watch-dirs = [] # directories to watch for triggering builds
 
-[output.pdf]
+# [output.pdf]
 
 [output.html]
 default-theme = "frappe"
@@ -42,7 +42,7 @@ copy-js = false # includes the JavaScript for the code editor
 line-numbers = false # displays line numbers for editable code
 runnable = false # displays a run button for rust code
 
-[output.html.code]
+# [output.html.code]
 # A prefix string per language (one or more chars).
 # Any line starting with whitespace+prefix is hidden.
 # hidelines = { python = "~" }
@@ -71,8 +71,8 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 
-[preprocessor.toc]
-command = "mdbook-toc"
-renderer = ["html"]
+# [preprocessor.toc]
+# command = "mdbook-toc"
+# renderer = ["html"]
 
-[preprocessor.footnote]
+# [preprocessor.footnote]
