@@ -8,6 +8,8 @@
 
 **Resume**: [Full](./resume_full.md) ᐧ [Short](./resume_short.md)
 
+<!-- {{#include social.md}} -->
+
 {{#include core_competencies.md}}
 {{#include foundational_technologies.md}}
 {{#include background.md}}
