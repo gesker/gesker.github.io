@@ -16,15 +16,15 @@ extra-watch-dirs = [] # directories to watch for triggering builds
 # [output.pdf]
 
 [output.html]
-# default-theme = "latte"
-# preferred-dark-theme = "latte"
+default-theme = "latte"
+preferred-dark-theme = "macchiato"
 no-section-label = false
 git-repository-url = "https://github.com/gesker"
 cname = "dennis.gesker.com"
 additional-css = [
-  # "./theme/catppuccin.css",
-  # "./theme/catppuccin-admonish.css",
-  # "./theme/my.css",
+  "./theme/catppuccin.css",
+  "./theme/catppuccin-admonish.css",
+  "./theme/my.css",
   "./theme/mdbook-admonish.css",
   # "theme/google-doc.css",
 ]
