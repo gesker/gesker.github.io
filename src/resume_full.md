@@ -1,39 +1,50 @@
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+
 {{#include address.md}}
 
-<div style="page-break-before:always">&nbsp;</div>
-<p></p>
+<div style="height: 200px">
 
 {{#include core_competencies.md}}
-
-<div style="page-break-before:always">&nbsp;</div>
-<p></p>
-
 {{#include foundational_technologies.md}}
+
+</div>
 
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
 
 {{#include background.md}}
-
-<div style="page-break-before:always">&nbsp;</div>
-<p></p>
-
 {{#include profile.md}}
 
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
+<br>
+<div style="height: 200px">
 
-{{#include professional.md}}
+{{#include professional/candela.md}}
+
+</div>
 
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
 
-{{#include awards.md}}
+{{#include professional/msu.md}}
+{{#include professional/alamon_cto.md}}
 
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
 
-{{#include projects.md}}
+{{#include professional/alamon_operations.md}}
+
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+
+{{#include professional/department_of_state.md}}
+
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+
+{{#include professional/alamon_it.md}}
 
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
@@ -59,3 +70,8 @@
 <p></p>
 
 {{#include organizations.md}}
+
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+
+{{#include projects.md}}

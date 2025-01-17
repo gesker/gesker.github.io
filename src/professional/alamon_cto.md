@@ -11,8 +11,7 @@
 - Define and represent the firm’s technological agenda
 - [Designed and Developed Mobile Application](https://alatrac.com)
   - Enabled Division recovery
-    - $330,000 Loss 2018
-    - $3M Net Profit by 2021
+    - $330,000 Loss 2018 to $3M Net Profit by 2021
   - GIS Enabled Android System using AWS as Backend
     - Includes GIS Data export/import/validation
       - ArcGIS, Windmill, PostGIS, qGIS
@@ -26,8 +25,7 @@
 - **Ensure continuity & security of technical operations**
   - _FULLY OPERATIONAL DURING COVID CRISIS_
 - Direct and Oversee Employees, Technology Development & Technology Support Teams
-  - Team: 2 IT Support Staff, 3 Full Time Developers
-  - Contractors as Required
+  - Team: 2 IT Support Staff, 3 Full Time Developers, Contractors as Required
 - Maintain firm’s technical knowledge base
   - Technology Landscape and Industry Developments
   - Employee Base Education & Professional Development

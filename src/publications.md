@@ -46,6 +46,9 @@ _**Internally Circulated Strategy Paper - Department of State (SECRET/NOFORN)**_
 
 ---
 
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+
 ### Migrating to Mozilla Thunderbird
 
 <img src="images/sysadmin_logo.png" alt="sysadmin_logo" style="width:8%; float: right;">

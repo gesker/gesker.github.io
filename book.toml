@@ -13,17 +13,6 @@ create-missing = true # whether or not to create missing pages
 use-default-preprocessors = true # use the default preprocessors
 extra-watch-dirs = [] # directories to watch for triggering builds
 
-# [output.pdf]
-# paper-width = 8
-# paper-height = 10
-# margin-top = 0.5
-# margin-bottom = 0.5
-# margin-left = 0.5
-# margin-right = 0.5
-
-# [output.pdf-outline]
-# like-wkhtmltopdf = true
-
 [output.html]
 site-url = "https://gesker.github.io"
 use-site-url-as-root = true
@@ -43,13 +32,29 @@ additional-css = [
 additional-js = ["./theme/mermaid.min.js", "./theme/mermaid-init.js"]
 # input-404 = "not-found.md"
 
+[preprocessor]
+
+[preprocessor.admonish]
+after = ["links"]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[preprocessor.footnote]
+
 [output.html.print]
 enable = true # include support for printable output
 page-break = true # insert page-break after each chapter
 
-# [output.html.fold]
-# enable = false # whether to enable section folding
-# level = 0 # the depth to start folding
+[output.html.fold]
+enable = false # whether to enable section folding
+level = 0 # the depth to start folding
 
 [output.html.playground]
 editable = false # allows editing the source code
@@ -78,18 +83,14 @@ copy-js = true # include Javascript code for search
 # [output.linkcheck]
 # follow-web-links = false
 
-[preprocessor]
+[output.pdf]
+page-ranges = "33-58"
+# paper-width = 8
+# paper-height = 10
+margin-top = 0.05
+margin-bottom = 0.05
+margin-left = 0.05
+margin-right = 0.05
 
-[preprocessor.admonish]
-after = ["links"]
-command = "mdbook-admonish"
-assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
-
-# [preprocessor.mermaid]
-# command = "mdbook-mermaid"
-
-# [preprocessor.toc]
-# command = "mdbook-toc"
-# renderer = ["html"]
-
-# [preprocessor.footnote]
+# [output.pdf-outline]
+# like-wkhtmltopdf = true
