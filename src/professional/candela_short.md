@@ -1,9 +1,8 @@
 <p style="font-size: 1em; font-weight: bold;">Candela Global, LLC, Portland, Oregon</p>
 <img src="images/candela_logo.png" alt="candela_logo" style="width:10%; float: right;">
+<p style="font-size: 0.85em;"><b>Independent Contractor</b>: January 2022 – Present</p>
+<p style="font-size: 0.75em;">
 
-**Independent Contractor**: January 2022 – Present
-
-- [US Patent Preparation](patents_pending.md)
 - Systems Architecture and Modernization
   - MicroServices
     - Quarkus, Rust, Kubernetes, Docker, Podman
@@ -22,4 +21,6 @@
 - Mobile Applications
   - Migrate JavaScript Applications to Flutter, HarmonyOS Preparation
 - Startup Support
-  - Cost Control Analysis\- **Cloud Spend Mitigation**, Budget Preparation, CapEx & Depreciation Planning
+  - Cost Control Analysis: **Cloud Spend Mitigation**, Budget Preparation, CapEx & Depreciation Planning
+
+</p>
