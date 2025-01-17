@@ -19,4 +19,12 @@ host:
 # Format all files
 fmt:
   dprint fmt
-  echo 'fmt complete'  
+  echo 'fmt complete'
+
+publish:
+  just fmt
+  mdbook build
+  git add .
+  git commit -m "publish"
+  git push
+  echo 'publish complete'
