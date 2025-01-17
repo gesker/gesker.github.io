@@ -14,10 +14,20 @@ use-default-preprocessors = true # use the default preprocessors
 extra-watch-dirs = [] # directories to watch for triggering builds
 
 # [output.pdf]
+# paper-width = 8
+# paper-height = 10
+# margin-top = 0.5
+# margin-bottom = 0.5
+# margin-left = 0.5
+# margin-right = 0.5
+
+# [output.pdf-outline]
+# like-wkhtmltopdf = true
 
 [output.html]
 site-url = "https://gesker.github.io"
 use-site-url-as-root = true
+theme = "macchiato"
 default-theme = "macchiato"
 preferred-dark-theme = "macchiato"
 no-section-label = false
