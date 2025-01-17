@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="en" class="macchiato sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="Home Page of Dennis Gesker">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-alerts.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+        <link rel="stylesheet" href="./theme/my.css">
+        <link rel="stylesheet" href="./theme/mdbook-admonish.css">
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "macchiato";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CCW7P40HZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CCW7P40HZY');
+</script>
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('macchiato')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>                            
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/gesker" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p style="font-size: 0.75em; text-align: center;">
+<h1 id="dennis-r-gesker"><a class="header" href="#dennis-r-gesker"><a href="https://dennis.gesker.com/resume_full.html">Dennis R. Gesker</a></a></h1>
+<p><strong><a href="mailto:dennis@gesker.com">dennis@gesker.com</a></strong> ᐧ <strong><a href="https://dennis.gesker.com">https://dennis.gesker.com</a></strong> ᐧ <strong>+1202783202</strong><br />
+<strong>Lake Oswego, Oregon</strong> ᐧ <strong>Fort Lauderdale, Florida</strong> ᐧ <strong>Three Forks, Montana</strong></p>
+</p>
+<hr />
+<p style="font-size: 0.45em; text-align: center;">
+IT Strategy ᐧ Project Management ᐧ Team Leadership ᐧ Technical Staff Development ᐧ Software Development Life Cycle (SDLC) ᐧ Agile & Waterfall ᐧ Enterprise Architecture ᐧ Microsoft Dynamics ᐧ System Administration ᐧ Linux ᐧ NixOS ᐧ Windows Server ᐧ Kubernetes ᐧ Docker ᐧ Podman ᐧ DevOps ᐧ Blockchain & Cryptocurrency ᐧ SQL ᐧ Postgresql ᐧ MySql ᐧ MS-SQL ᐧ NoSql ᐧ MongoDb ᐧ DynamoDb ᐧ AWS ᐧ Java ᐧ Jakarta EE ᐧ Quarkus ᐧ Spring Boot ᐧ GIS ᐧ GeoTools ᐧ Qgis ᐧ SVN ᐧ Maven ᐧ GIT ᐧ Ansible ᐧ Terraform ᐧ Puppet ᐧ DevOps ᐧ Cloud
+</p>
+<p style="font-size: 0.45em; text-align: center;">
+<hr />
+<table style="width: 100%; border:none !important;">
+<tr>
+<td style="width: 20%; vertical-align: top; padding: none; border:none !important;" colspan="1" rowspan="1">
+<p style="font-size: 0.50em; font-weight: bold;">Awards</p>
+<hr />
+<hr />
+<p style="font-size: 0.50em; font-weight: bold;">Alamon, Inc.</p>
+<img src="images/alamon_logo.png" alt="alamon_logo" style="width:10%; float: right;">
+<p style="font-size: 0.50em; font-style: italic;">President’s Award for Innovation</p>
+<p style="font-size: 0.50em;">
+Annual Leadership Conference
+2017-Jan
+Kalispell, MT</p>
+<p style="font-size: 0.50em; font-weight: bold;">U.S. Department of State</p>
+<img src="images/alamon_logo.png" alt="alamon_logo" style="width:10%; float: right;">
+<p style="font-size: 0.50em; font-style: italic;">Dedication to Mission</p>
+<p style="font-size: 0.50em;">2010 - 2012
+US Embassy Italy</p>
+<p style="font-size: 0.50em; font-weight: bold;">U.S. Department of State</p>
+<img src="images/alamon_logo.png" alt="alamon_logo" style="width:10%; float: right;">
+<p style="font-size: 0.50em; font-style: italic;">Extra Mile Award</p>
+<p style="font-size: 0.50em;">
+Information Management Office
+2011-Sept
+US Embassy Italy</p>
+<p style="font-size: 0.50em; font-weight: bold;">Patents Pending</p>
+<hr />
+<hr />
+<p style="font-size: 0.50em; font-weight: bold;">Systems and Methods for Distributed Blockchain Monitoring and Inherent Latency Compensation</p>
+<img src="images/blockchain_logo.png" alt="blockchain_logo" style="width:10%; float: right;">
+<p style="font-size: 0.50em; font-style: italic;">18/323408</p>
+<p style="font-size: 0.50em;">2023-May-25</p>
+<p style="font-size: 0.50em; font-weight: bold;">Systems and Methods for Economic Price Discovery In Social Media Networks Including Games</p>
+<img src="images/social_media_logo.png" alt="social_media_logo" style="width:10%; float: right;">
+<p style="font-size: 0.50em; font-style: italic;">18/323409</p>
+<p style="font-size: 0.50em;">2023-May-25</p>
+<p style="font-size: 0.50em; font-weight: bold;">Publications</p>
+<hr />
+<hr />
+<p style="font-size: 0.50em; font-weight: bold;">Two Must-Have Tools for Jakarta EE Developers</p>
+<img src="images/infoq_logo.png" alt="infoq_journal_logo" style="width:10%; float: right;">
+<p style="font-size: 0.50em; font-style: italic;">InfoQ.com April 2022</p>
+<p style="font-size: 0.50em; font-weight: bold;">Enter Jakarta EE: an Inoculation Against Fear, Uncertainty and Doubt in the Java Community</p>
+<img src="images/linux_journal_logo.png" alt="linux_journal_logo" style="width:10%; float: right;">
+<p style="font-size: 0.50em; font-style: italic;">Linux Journal No. 287 June 2018</p>
+<p style="font-size: 0.50em; font-weight: bold;">Introducing the Culture of Free and Open Source Software to the Department of State</p>
+<img src="images/dos_logo.png" alt="dos_logo" style="width:8%; float: right;">
+<p style="font-size: 0.30em; font-weight: bold;">
+Internally Circulated Strategy Paper
+Department of State (SECRET/NOFORN)</p>
+<p style="font-size: 0.50em; font-style: italic;">Department of State - November 2010</p>
+</td>
+<td style="width: 80%; vertical-align: top; padding: none; border:none !important; font-size: 0.50em;" colspan="1" rowspan="1">
+<p style="font-size: 1em; font-weight: bold;">Candela Global, LLC, Portland, Oregon</p>
+<img src="images/candela_logo.png" alt="candela_logo" style="width:10%; float: right;">
+<p style="font-size: 0.85em;"><b>Independent Contractor</b>: January 2022 – Present</p>
+<p style="font-size: 0.75em;">
+<ul>
+<li>Systems Architecture and Modernization
+<ul>
+<li>MicroServices
+<ul>
+<li>Quarkus, Rust, Kubernetes, Docker, Podman</li>
+<li>Kafka, RabbitMQ, Postgresql Cron Module</li>
+</ul>
+</li>
+<li>Monolith to Microservices Migration/Refactor
+<ul>
+<li>Java/Jakarta EE to Quarkus with Apache Kafka &amp; Spring Boot to Quarkus (Vertx)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CI/CD Implementation
+<ul>
+<li>Terraform, Ansible, OpenTofu, GitHub/GitLab Actions, Jenkins</li>
+<li>Cloud and Cloud Native, Migrate AWS to/from Linode, Establish Greenfield Backend - Azure, <strong>NixOS</strong> and Debian Containerization</li>
+</ul>
+</li>
+<li>Private CA Authority Transport Layer Security (TLS) Systems
+<ul>
+<li>Biometric Identity - DNA, Facial Recognition</li>
+</ul>
+</li>
+<li>Machine Learning
+<ul>
+<li>Pipeline Simplification, Analyze and mitigate model overfit</li>
+<li>Migrate Python Routines (Tensorflow) to/from Rust</li>
+<li>DNA (Deoxyribonucleic Acid Information System) Identity Validation</li>
+</ul>
+</li>
+<li>Mobile Applications
+<ul>
+<li>Migrate JavaScript Applications to Flutter, HarmonyOS Preparation</li>
+</ul>
+</li>
+<li>Startup Support
+<ul>
+<li>Cost Control Analysis: <strong>Cloud Spend Mitigation</strong>, Budget Preparation, CapEx &amp; Depreciation Planning</li>
+</ul>
+</li>
+</ul>
+</p>
+<p style="font-size: 1em; font-weight: bold;">Montana State University, Bozeman, Montana</p>
+<img src="images/msu_logo.png" alt="msu_logo" style="width:10%; float: right;">
+<p style="font-size: 0.85em;"><b>Graduate Studies Refresher</b>: Fall 2021</p>
+<p style="font-size: 0.75em;">
+<ul>
+<li>Artificial Intelligence (AI/ML) Ph.D. Participation
+<ul>
+<li>Full Time Fall 2021</li>
+</ul>
+</li>
+<li>Participate in Ph.D. Seminar</li>
+<li>Foundational Mathematics Course Work</li>
+<li><strong>Accepted to CS Ph.D. Program</strong>: <em>Elected to return to industry</em></li>
+</ul>
+</p>
+<p style="font-size: 1em; font-weight: bold;">Alamon, Inc., Kalispell, Montana</p>
+<img src="images/alamon_logo.png" alt="alamon_logo" style="width:10%; float: right;">
+<p style="font-size: 0.85em;"><b>Chief Technology Officer</b>: July 2018 – August 2021</p>
+<p style="font-size: 0.75em;">
+<ul>
+<li>Define and represent the firm’s technological agenda</li>
+<li><a href="https://alatrac.com">Designed and Developed Mobile Application</a>
+<ul>
+<li>Enabled Division recovery
+<ul>
+<li>$330,000 Loss 2018</li>
+<li>$3M Net Profit by 2021</li>
+</ul>
+</li>
+<li>GIS Enabled Android System using AWS as Backend
+<ul>
+<li>Includes GIS Data export/import/validation
+<ul>
+<li>ArcGIS, Windmill, PostGIS, qGIS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Near Real Time Material Tracking and Inventory</li>
+<li>Real Time Reporting and Work Assignment</li>
+<li><a href="https://learn.microsoft.com/en-us/dynamics-gp/">Microsoft Dynamics</a> / <a href="https://www.microsoft.com/en-us/sql-server">MS-SQL</a> Project Accounting Integration</li>
+<li><a href="https://iml-na.com/product/iml-powerdrill/">IML Resistograph</a> Analysis &amp; Bluetooth Integration</li>
+</ul>
+</li>
+</ul>
+</p>
+<p style="font-size: 1em; font-weight: bold;">Alamon, Inc., Kalispell, Montana</p>
+<img src="images/alamon_logo.png" alt="alamon_logo" style="width:10%; float: right;">
+<p style="font-size: 0.85em;"><b>Operations Manager: Information Technology</b>: March 2012 – June 2018</p>
+<p style="font-size: 0.85em;"><b>Sept 2017</b>: Elected Trustee of ESOP Board</p>
+<p style="font-size: 0.85em;"><b>May 2017</b>: Elected Company Officer; Secretary & Treasurer</p>
+<p style="font-size: 0.75em;">
+<ul>
+<li>Achieved significant cost reduction by building in house employee Payroll and HR portal
+<ul>
+<li>8,032 Administrative Man Hours Saved in initial year (2014), 15,008 by 2018</li>
+</ul>
+</li>
+<li>Reduced project analysis time (450%) increased, Increased Bid Turn Around 32% by 2018
+<ul>
+<li>$217,000 Direct Cost Reduction, $432,000 Direct Cost Reduction (2018)</li>
+</ul>
+</li>
+<li>Ensure IT support and communication capabilities of highly mobile workforce
+<ul>
+<li>37 States in FY 2017, 45 States in FY 2018</li>
+</ul>
+</li>
+<li>Architect and Design for Enterprise Applications</li>
+<li>Project Management and oversight of SDLC using Agile, Kanban methodologies.
+<ul>
+<li>Full Stack Java EE Development, SQL Modeling and Normalization</li>
+<li>Manage software development team and IT systems and support personnel</li>
+</ul>
+</li>
+<li>Define and Prepare Project Objectives, Design Documents and Budgets</li>
+<li>Recruit, Hire and Train New Team Members</li>
+</ul>
+</p>
+</td>
+</tr>
+</table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="resume_full_for_pdf_only.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="resume_full_for_pdf_only.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/mermaid.min.js"></script>
+        <script src="./theme/mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

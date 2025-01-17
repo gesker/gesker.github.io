@@ -21,10 +21,10 @@ fmt:
   dprint fmt
   echo 'fmt complete'
 
-# publish:
-#   just fmt
-#   mdbook build
-#   git add .
-#   git commit -m "publish"
-#   git push
-#   echo 'publish complete'
+publish:
+  just fmt
+  mdbook build
+  git add .
+  git commit -m "publish"
+  git push
+  echo 'publish complete'
