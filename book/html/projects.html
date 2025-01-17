@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="en" class="macchiato" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Projects</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="Home Page of Dennis Gesker">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+        <link rel="stylesheet" href="./theme/my.css">
+        <link rel="stylesheet" href="./theme/mdbook-admonish.css">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CCW7P40HZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CCW7P40HZY');
+</script>
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "macchiato";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('macchiato')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="core_competencies.html"><strong aria-hidden="true">2.</strong> Core Competencies</a></li><li class="chapter-item expanded "><a href="foundational_technologies.html"><strong aria-hidden="true">3.</strong> Foundational Technologies</a></li><li class="chapter-item expanded "><a href="background.html"><strong aria-hidden="true">4.</strong> Background</a></li><li class="chapter-item expanded "><a href="profile.html"><strong aria-hidden="true">5.</strong> Executive Profile</a></li><li class="chapter-item expanded "><a href="portfolio.html"><strong aria-hidden="true">6.</strong> Portfolio</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="patents_pending.html"><strong aria-hidden="true">6.1.</strong> Patents Pending</a></li><li class="chapter-item expanded "><a href="trademarks.html"><strong aria-hidden="true">6.2.</strong> Trademarks</a></li><li class="chapter-item expanded "><a href="publications.html"><strong aria-hidden="true">6.3.</strong> Publications</a></li></ol></li><li class="chapter-item expanded "><a href="professional.html"><strong aria-hidden="true">7.</strong> Professional History</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">7.1.</strong> Projects</a></li><li class="chapter-item expanded "><a href="awards.html"><strong aria-hidden="true">7.2.</strong> Awards</a></li><li class="chapter-item expanded "><a href="organizations.html"><strong aria-hidden="true">7.3.</strong> Professional Organizations</a></li></ol></li><li class="chapter-item expanded "><a href="education.html"><strong aria-hidden="true">8.</strong> Education</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="certifications.html"><strong aria-hidden="true">8.1.</strong> Training and Certifications</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="resume_short.html">Resume Short</a></li><li class="chapter-item expanded affix "><a href="resume_full.html">Resume Full</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                             <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                             <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"> 
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <img src="./images/zalag_square_match_50x50_frappe.png" alt="Zalag Logo" width="20" height="20">
+                        </label>
+                    </h1>
+
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/gesker" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="projects"><a class="header" href="#projects">Projects</a></h2>
+<hr />
+<hr />
+<h3 id="aveum-systems---dna-based-id-and-tracking-system"><a class="header" href="#aveum-systems---dna-based-id-and-tracking-system"><a href="https://www.aveumsystems.com">Aveum Systems</a> - DNA Based ID and Tracking System</a></h3>
+<img src="images/aveum_logo.png" alt="Aveum_Logo" style="width:10%; float: right;">
+<hr />
+<p><strong>Date</strong>: Spring 2024</p>
+<p>Supported <a href="https://www.aveumsystems.com/">Aveum Systems, Inc.</a> in formulating their
+technological road map for developing massively scalable <a href="https://en.wikipedia.org/wiki/DNA">DNA</a> information systems and
+related technologies which will enable the construction of identity systems that are hyper-secure, cryptographically
+rigorous, <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">AI</a>/<a href="https://en.wikipedia.org/wiki/Machine_learning">ML</a>
+backed and are at the same time AI resistant.</p>
+<p>Aveum Systems, Inc. is a Delaware Corporation operating in the US and Europe targeting pilot programs in Africa and
+the <a href="https://houseofsaud.com/">Kingdom of Saudi Arabia</a>.</p>
+<h3 id="alatrac---monetize--market-ready"><a class="header" href="#alatrac---monetize--market-ready"><a href="https://alatrac.com">AlaTrac</a> - Monetize &amp; Market Ready</a></h3>
+<img src="images/alatrac_logo.png" alt="Alatrac_Logo" style="width:10%; float: right;">
+<hr />
+<p><strong>Date</strong>: June 2021</p>
+<p>AlaTrac is a field service scheduling, asset tracking and assessment tool that has been leveraged by internal Alamon field service teams to assign, inspect and capture key attributes of industrial and utility assets including telephone poles, energy storage units, cellular towers and related infrastructures. While the solution is being leveraged by Alamon’s traditional lines of business, the objective is to productize the solution to third parties and create a new source of revenue for the company.</p>
+<p>AlaTrac is an open standards based, hybrid application that is currently running in the AWS cloud. While the solution is intended to be as easy to use as an excel spreadsheet, the platform’s capabilities extend beyond data input. AlaTrac’s core features include the ability to geolocate an asset, assign an asset for inspection, establish roles and set field based rules and intelligent routing for the intake of data by inspectors, including images, telemetry data from bluetooth sensors/device. These attributes are then captured via an Android based mobile application (Field Collector). Once captured, the mobile application monitors for connectivity and once connected (either via cellular or wifi network) intelligently publishes inputs and data back to the core platform (AlaTrac) based on data type and available bandwidth.</p>
+<p>While the AlaTrac has been leveraged internally on a wide range of projects, the solution is currently beyond a Minimal Viable Product, is in beta and continues to be prepped and hardened for third party access based upon the efficiency value and revenue facilitation it has already delivered for internal use cases.</p>
+<h3 id="transform-application-architecture"><a class="header" href="#transform-application-architecture">Transform Application Architecture</a></h3>
+<hr />
+<p><strong>Date</strong>: July 2019</p>
+<p>Initiate, move, transform and refactor critical legacy applications from monolithic to microservices, distributed systems leveraging Jakarta EE, MicroProfile, PostgreSQL, MongoDb, Lucene (Elastic Search), GeoTools (Java GIS libs), Hadoop and the Hadoop ecosystem of add ons (Hive, Spark, etc.) Leverage Cloud vendors where appropriate.</p>
+<h3 id="restructure-technology-department"><a class="header" href="#restructure-technology-department">Restructure Technology Department</a></h3>
+<hr />
+<p><strong>Date</strong>: March 2018</p>
+<p>Engaged and conferred with outside consulting and subject matter experts with regard to skill sets and technologies most appropriate for new green field software development projects. Acquired personnel to properly support ongoing technical operations needs. Optimized current software development processes to increase effectiveness of production of present and legacy development efforts. Added development personnel for go forward development efforts. Ensured that department structural changes are safely within the organization’s financial constraints and are ready to support the organization's strategic growth initiatives.</p>
+<h3 id="federal-business-opportunities-process-development"><a class="header" href="#federal-business-opportunities-process-development">Federal Business Opportunities Process Development</a></h3>
+<hr />
+<p><strong>Date</strong>: March 2017</p>
+<p>Designed, implemented and graphically mapped and trained personnel in a new business process for cross functional and cross departmental teams to absorb, screen, evaluate, pursue and track both direct and subcontract opportunities (and sales contacts) as generated by the U.S. Federal Business Opportunity job and purchasing solicitation system. ( <a href="http://fbo.gov/">http://FBO.gov</a> ) The system as designed not only enables but encourages effective communication between team members working on this initiative from different departments.</p>
+<h3 id="geographic-information-processing-cost-reduction"><a class="header" href="#geographic-information-processing-cost-reduction">Geographic Information Processing Cost Reduction</a></h3>
+<hr />
+<p><strong>Date</strong>: February 2017</p>
+<p>Extended effort to reduce/avoid significant licensing fees associated with ArcGIS Desktop and associated products by introducing Open Source alternatives. Most of the company’s ordinary usage and data processing of ESRI compatible (shp, gdb, csv, kml, etc.) and other GIS file formats had relied upon the proprietary and expensive software solution. Introduction and training of key organizational members and users on the alternative (e.g. QGIS, GDAL and PostGIS) Open Source products and database extensions all of which have no licensing fees but are capable of performing the same functionality as required internally by the company enabled savings equivalent to that of several full time administrative personnel.</p>
+<h3 id="ms-access-marketing-database"><a class="header" href="#ms-access-marketing-database">MS-Access Marketing Database</a></h3>
+<hr />
+<p><strong>Date</strong>: November 2015</p>
+<p>As a team built a MS-Access 2013 database that provides an efficient system for customer contact interaction tracking &amp; follow up on bid opportunity tracking and revenue projection.</p>
+<p>The team's design had specific goals of increasing initial entry customer and contact speed, reducing need to enter duplicate data and reducing update time required by end users. Hence, the database schema is highly normalized and screen navigation is minimized to the point of being austere.</p>
+<p>The system has a (somewhat) novel functionality built in where, based on team defined business procedure triggers, the application sends email calendar events/notification using standards compliant "ics" attachments. This functionality is completely independent of the email client installed on the user's PC so compatibility across mail client versions are not an issue on this project. Only the appropriate team members -- and their administrative staff -- on any specific customer interaction or bid opportunity follow-up are notified, reducing "noise" often associated with many cloud solutions.</p>
+<p>Tracking and revenue projection reports have already been outlined/designed by the team and are pending automation. Application behavior, events, automation and reporting are of course written using Visual Basic for Applications (VBA.)</p>
+<p>Custom VBA code written for this project will be useful should we choose to hook to other applications within the Microsoft product line and perhaps even useful in pushing data to other custom applications within Alamon's stable of custom applications.</p>
+<p>It has the benefit of allowing customization and little to zero recurring cost (not much maintenance is anticipated) as compared to the cloud solutions we researched.</p>
+<h3 id="marketing-effort-support"><a class="header" href="#marketing-effort-support">Marketing Effort Support</a></h3>
+<hr />
+<p><strong>Date</strong>: April 2016</p>
+<p>In the first quarter of this year I have been recruited by my leadership team to become more deeply involved both initiating direct customer contact and in a technical support role in the company's overall marketing effort.</p>
+<p>This has been an enjoyable diversion from my deep diving into technical projects and it has been a learning opportunity in observing and participating in the management of customer accounts serviced by my firm and by my senior management.</p>
+<h3 id="enhanced-project-reporting-site"><a class="header" href="#enhanced-project-reporting-site">Enhanced Project Reporting Site</a></h3>
+<hr />
+<p><strong>Date</strong>: August 2015</p>
+<p>MS-Dynamics Project Reporting site built on the Java EE platform using GlassFish 4.1, JSF (PrimeFaces) and Eclipselink.</p>
+<p>The site pulls necessary project data from the accounting system at the MS-SQL database layer to securely issue project information, performance, trending and charts to leadership, managers and supervisors.</p>
+<p>The site negates the cost associated with adding additional MS-Dynamics licenses and enables real time distribution of information to managers and supervisors not physically located at our company HQ.</p>
+<h3 id="file-management-system"><a class="header" href="#file-management-system">File Management System</a></h3>
+<hr />
+<p><strong>Date</strong>: May 2015</p>
+<p>Built a custom site on the Java EE platform using GlassFish 4.1, JSF (PrimeFaces) and Eclipselink.</p>
+<p>The site pulls necessary payroll data from the accounting system at the MS-SQL database layer to securely issue weekly payroll information to employees. It also allows administrative staff to publish documents by simply dropping documents into a shared Windows Domain network folder.</p>
+<p>The site completely negates the need for ADP payroll services and its associated cost, US Postal Cost and fosters the rapid distribution of documents (policy, procedure, safety, etc.) to employees.</p>
+<h3 id="regular-duties-and-miscellaneous-competencies"><a class="header" href="#regular-duties-and-miscellaneous-competencies">Regular Duties and Miscellaneous Competencies</a></h3>
+<hr />
+<p><strong>Date</strong>: September 1996 - Present</p>
+<p>Direct and manage special projects and initiatives and perform special assignments. Identifies the need for special projects and ensures appropriate representatives from various directorates/organizations and subordinate units are included.</p>
+<p>Experience includes specialized demonstrated knowledge of, and ability to apply, policies, practices and principles of management and to effectively supervise a subordinate work force that includes subordinate supervisors or leaders. Knowledge of principles and practices of team building. Demonstrated knowledge of, and ability to apply, extensive knowledge of software technology and project management to include software system acquisition life-cycles; software engineering disciplines; quality assurance; CM; project planning, tracking, and oversight; functional processes; and technical alternatives. Utilize IT-related experience that demonstrates each of the four competencies: Attention to Detail, Customer Service, Oral Communication, and Problem Solving.</p>
+<p>Advise and provide counsel to employees regarding policies, procedures, directives of management and make decisions presented by subordinate personnel.</p>
+<p>Balances workload of employees for software development.</p>
+<p>Plan and coordinate all phases of acquisition, implementation and integration of IT assets.</p>
+<p>Develop specifications, justifications and economic analysis in support of selection and acquisition actions.</p>
+<p>Provide oversight and customer support for designated wireless communication equipment; design database applications according to data modeling.</p>
+<p>Develop customer support policies, procedures, standards, and customer service performance requirements.</p>
+<p>Provide users with recommendations concerning upgrades or new equipment to improve operations.</p>
+<p>Appoint equipment custodians, train and provide guidance to monitor the physical installation and utilization of equipment.</p>
+<p>Conduct annual physical inventories of Information Technology (IT) equipment.</p>
+<p>Coordinate and monitor facility preparation for IT equipment and systems.</p>
+<p>Administers counseling sessions to employees for policy directives and procedures.</p>
+<p>Ability to select, elect and promote candidates for vacancy positions.</p>
+<p>Initiates appraisal feedback sessions for employees during quarterly evaluations.</p>
+<p>Identifies developmental needs for employees for on-the-job training.</p>
+<p>Evaluate work performance of subordinates; advise and provide funding requirements and financial guidance that is responsive to the organization's needs; such as policies, procedures, directives of management and administrative matters.</p>
+<p>Make decisions on work issues submitted by subordinate personnel or by contractors.</p>
+<p>Monitor, review, check and verify requests for spending of funds from approved operating budgets.</p>
+<p>Formulate life cycle cost of IT resources and anticipated enhancement and upgrades.</p>
+<p>Technical expert in the development of short and long-term strategic, tactical and operational plans pertinent to organization upgrade and migration programs.</p>
+<p>Analyzes business processes and workflow procedures, gathers information from consultation with managers and individual users, studies work products, and observes work processes.</p>
+<p>Synthesizes findings into a proposal which translates functional requirements into design specifications that include hardware, software, database, and other requirements which will meet the business needs of the organization.</p>
+<p>Conducts feasibility studies including research of organizations' functional descriptions and objectives to determine Information Technology (IT) system requirements and applies fact finding processes to identify methods to meet those needs.</p>
+<p>Supervise the Automated Information System (AIS) Life Cycle Support Section, providing staff and functional area representatives with high level technical expertise for System/Software Life-Cycle Management.</p>
+<p>Supervises the Software Services Section. Prepares correspondence, documentation, reports, briefings, etc. Working independently or with a team member(s) identifies the target audience; timeliness and resources needed to complete responses to various inquiries.</p>
+<p>Coordinate on development and evaluation of acquisition plans, application software, hardware, communications and project related technical activities.</p>
+<p>Evaluate work performance of subordinates and arranges planning, designing and carrying out objectives for coordinating on projects.</p>
+<p>Design and develop application software prototype according to the requirements.</p>
+<p>Test and validate application code according to quality software standards.</p>
+<p>Modify and upgrade application code according to software change requests.</p>
+<p>Troubleshoot software application failure to determine if problems exist in hardware or software.</p>
+<p>Perform software control of data models, database structure, design modularity, programming languages, software pleases and technical issues.</p>
+<p>Ensure systems meet interoperability and supportability requirements and expectations.</p>
+<p>Monitor and review the application software development programs provided under commercial contracts, interagency support agreements or assignments.</p>
+<p>Ensure system architecture compliance with security regulations and instructions.</p>
+<p>Monitor IT requirements and determine the need for new or updated IT capabilities.</p>
+<p>Attention to Detail - Review complex data from multiple sources and determine relevant information to a given situation. I draft, edit and disseminate written reports and status updates that are factual, timely and error free.</p>
+<p>Customer Service - Develop and maintain relationships with customers with diverse needs. I provide technical and complex information about products and services. I assess the needs of customers and identify or tailor products and/or services to meet their needs. I resolve highly complex or non-routine problems, questions, or complaints and direct the most complex problems, questions, or complaints to the appropriate person.</p>
+<p>Oral Communication - I communicate, explain, or defend moderately complex ideas or information clearly. I listen to others and recognize potential miscommunications.</p>
+<p>Problem Solving - I use logic to identify alternatives to solve moderately difficult problems. I identify and solve problems by gathering and applying information from a variety of materials or sources that provide several alternatives.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="professional.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="awards.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="professional.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="awards.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/mermaid.min.js"></script>
+        <script src="./theme/mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>
