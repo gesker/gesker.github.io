@@ -27,8 +27,8 @@ extra-watch-dirs = [] # directories to watch for triggering builds
 [output.html]
 site-url = "https://gesker.github.io"
 use-site-url-as-root = true
-# theme = "macchiato"
-default-theme = "dark"
+theme = "macchiato"
+default-theme = "macchiato"
 preferred-dark-theme = "macchiato"
 no-section-label = false
 git-repository-url = "https://github.com/gesker"
