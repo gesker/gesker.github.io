@@ -85,8 +85,8 @@ copy-js = true # include Javascript code for search
 follow-web-links = false
 
 [output.pdf]
-theme = "latte"
-page-ranges = "33-58"
+theme = "rust"
+page-ranges = "50-70" # Just print resume_full_for_pdf_only.md
 # paper-width = 8
 # paper-height = 10
 margin-top = 0.05

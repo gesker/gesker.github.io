@@ -20,3 +20,4 @@
 
 [Resume Short](resume_short.md)
 [Resume Full](resume_full.md)
+[-](resume_full_for_pdf_only.md)
