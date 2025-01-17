@@ -183,10 +183,7 @@ Evaluate work performance of subordinates and arranges planning, designing and c
 
 Design and develop application software prototype according to the requirements.
 
-Test and validate application code according to quality software standards.
-
-Modify and upgrade application code according to software change requests.
-
+Test and validate application code according to quality theme = "ayu"
 Troubleshoot software application failure to determine if problems exist in hardware or software.
 
 Perform software control of data models, database structure, design modularity, programming languages, software pleases and technical issues.

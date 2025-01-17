@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="macchiato" dir="ltr">
+<html lang="en" class="macchiato sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -30,10 +30,19 @@
 
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-alerts.css">
         <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
         <link rel="stylesheet" href="./theme/my.css">
         <link rel="stylesheet" href="./theme/mdbook-admonish.css">
 
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "macchiato";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
 
 
 <!-- Google tag (gtag.js) -->
@@ -47,14 +56,8 @@
 </script>
 
     </head>
-    <body class="sidebar-visible no-js">
+    <body>
     <div id="body-container">
-        <!-- Provide site root to javascript -->
-        <script>
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "macchiato";
-        </script>
-
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -76,19 +79,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('macchiato')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -98,38 +98,20 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="core_competencies.html"><strong aria-hidden="true">2.</strong> Core Competencies</a></li><li class="chapter-item expanded "><a href="foundational_technologies.html"><strong aria-hidden="true">3.</strong> Foundational Technologies</a></li><li class="chapter-item expanded "><a href="background.html"><strong aria-hidden="true">4.</strong> Background</a></li><li class="chapter-item expanded "><a href="profile.html"><strong aria-hidden="true">5.</strong> Executive Profile</a></li><li class="chapter-item expanded "><a href="portfolio.html"><strong aria-hidden="true">6.</strong> Portfolio</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="patents_pending.html"><strong aria-hidden="true">6.1.</strong> Patents Pending</a></li><li class="chapter-item expanded "><a href="trademarks.html"><strong aria-hidden="true">6.2.</strong> Trademarks</a></li><li class="chapter-item expanded "><a href="publications.html"><strong aria-hidden="true">6.3.</strong> Publications</a></li></ol></li><li class="chapter-item expanded "><a href="professional.html"><strong aria-hidden="true">7.</strong> Professional History</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">7.1.</strong> Projects</a></li><li class="chapter-item expanded "><a href="awards.html"><strong aria-hidden="true">7.2.</strong> Awards</a></li><li class="chapter-item expanded "><a href="organizations.html"><strong aria-hidden="true">7.3.</strong> Professional Organizations</a></li></ol></li><li class="chapter-item expanded "><a href="education.html"><strong aria-hidden="true">8.</strong> Education</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="certifications.html"><strong aria-hidden="true">8.1.</strong> Training and Certifications</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="resume_short.html">Resume Short</a></li><li class="chapter-item expanded affix "><a href="resume_full.html">Resume Full</a></li></ol>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
-
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
@@ -137,7 +119,6 @@
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
                         </label>
@@ -145,22 +126,22 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                             <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
-                             <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
-                             <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>                            
                         </ul>
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
 
-                    <h1 class="menu-title"> 
-                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <img src="./images/zalag_square_match_50x50_frappe.png" alt="Zalag Logo" width="20" height="20">
-                        </label>
-                    </h1>
-
+                    <h1 class="menu-title"></h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
