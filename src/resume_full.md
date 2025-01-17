@@ -1,8 +1,8 @@
 {{#include address.md}}
 
-{{#include core_competencies.md}}
-
 {{#include foundational_technologies.md}}
+
+{{#include core_competencies.md}}
 
 {{#include background.md}}
 

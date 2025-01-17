@@ -1,19 +1,27 @@
-<div style="page-break-before:always">&nbsp;</div>
-<p></p>
+<p style="font-size: 0.75em; text-align: center;">
 
 {{#include address.md}}
 
-<div style="height: 200px">
+</p>
+
+---
+
+<p style="font-size: 0.45em; text-align: center;">
+{{#include foundational_technologies_content.md }}
+</p>
+<p style="font-size: 0.45em; text-align: center;">
+
+---
+
+{{#include background.md}}
 
 {{#include core_competencies.md}}
-{{#include foundational_technologies.md}}
 
-</div>
+---
 
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
 
-{{#include background.md}}
 {{#include profile.md}}
 
 <div style="page-break-before:always">&nbsp;</div>
