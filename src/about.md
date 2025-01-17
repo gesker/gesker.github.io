@@ -6,7 +6,7 @@
 
 ---
 
-**Resume**: [Full](./resume_full.md) ᐧ [Short](./resume_short.md)
+**Resume**: [Full](./resume_full.md)
 
 <!-- {{#include social.md}} -->
 
