@@ -6,7 +6,7 @@
 
 ---
 
-**Manager – Special Project:** September 1996 – September 2010
+**Manager – Special Projects:** September 1996 – September 2010
 
 - Developed Method of Procedure for Telecommunications (Pole) asset infrastructure and inspections based on RUS standards. Developed supporting survey collection application using GeoAge FAST (running on Microsoft ME platform) and back end file processing including record import, verification & reporting application using Java SE, Java EE and MS-SQL technologies.
 - Trustee and member of the company's Retirement Plan Investment Committee. Committee/team provides oversight and direction for transition of the company's pooled profit sharing plan to employee self-directed plan which is 401(k) addition ready.

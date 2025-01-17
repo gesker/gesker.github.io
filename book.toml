@@ -86,7 +86,7 @@ follow-web-links = false
 
 [output.pdf]
 theme = "rust"
-page-ranges = "50-70" # Just print resume_full_for_pdf_only.md
+# page-ranges = "47-100" # Just print resume_full_for_pdf_only.md
 # paper-width = 8
 # paper-height = 10
 margin-top = 0.05
