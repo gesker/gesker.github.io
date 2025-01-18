@@ -54,7 +54,7 @@ enable = true # include support for printable output
 page-break = true # insert page-break after each chapter
 
 [output.html.fold]
-enable = false # whether to enable section folding
+enable = true # whether to enable section folding
 level = 0 # the depth to start folding
 
 [output.html.playground]
