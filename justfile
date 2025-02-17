@@ -51,4 +51,4 @@ build:
 
 # Choose NOT to have github pages build the site - manual copy
 gh-pages:
-  cp -r ./target/website ./book
+  cp -r ./target/website ./src/book
