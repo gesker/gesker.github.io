@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en" class="macchiato sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Welcome</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="Home Page of Dennis Gesker">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-alerts.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+        <link rel="stylesheet" href="./theme/my.css">
+        <link rel="stylesheet" href="./theme/mdbook-admonish.css">
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "macchiato";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CCW7P40HZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CCW7P40HZY');
+</script>
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('macchiato')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>                            
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/gesker" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <table style="width: 100%; border:none !important;">
+  <tr>
+    <td style="width: 100%; text-align: center; vertical-align: top; padding: none; border:none !important;" colspan="1" rowspan="1">
+      <p style="font-size: 2em;"><b>Dennis R. Gesker</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 100%; text-align: center; vertical-align: top; padding: none; border:none !important;" colspan="1" rowspan="1">
+      <img src="images/profile_picture.jpg" alt="Dennis R. Gesker" style="width:33%; float: center;"/>
+    </td>
+  <tr>
+    <td style="width: 100%; text-align: center; vertical-align: top; padding: none; border:none !important;" colspan="1" rowspan="1">
+      <p style="font-size: 0.85em;"><b>Teams, Technology, Tools and Timing</b></p>
+    </td>
+  </tr>
+  </tr>
+</table>
+<hr />
+<hr />
+<p><strong>Resume</strong>: <a href="./resume_full.html">Full</a></p>
+<!-- ## Social
+
+[![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](http://google.com.au/)
+
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](http://google.com.au/)
+
+[![Threads](https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=Threads&logoColor=white)](http://google.com.au/)
+
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](http://google.com.au/) -->
+<h2 id="core-competencies"><a class="header" href="#core-competencies">Core Competencies</a></h2>
+<hr />
+<hr />
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left"></th><th style="text-align: left"></th></tr></thead><tbody>
+<tr><td style="text-align: left"><br></td><td style="text-align: left"><br></td></tr>
+<tr><td style="text-align: left">Leadership and Human Capital Management</td><td style="text-align: left">Process and Change Management</td></tr>
+<tr><td style="text-align: left">Information Resource Strategy and Management</td><td style="text-align: left">IT Performance Assessment</td></tr>
+<tr><td style="text-align: left">IT Project and Program Management</td><td style="text-align: left">Capital Planning and Investment Control</td></tr>
+<tr><td style="text-align: left">Acquisition &amp; Organization Integration</td><td style="text-align: left">Cybersecurity/Information Assurance (IA)</td></tr>
+<tr><td style="text-align: left">Information and Knowledge Management</td><td style="text-align: left">Enterprise &amp; Software Architecture</td></tr>
+<tr><td style="text-align: left">Technology Management and Assessment</td><td style="text-align: left">Technical Staff Training &amp; Development</td></tr>
+</tbody></table>
+</div>
+<h2 id="foundational-technologies"><a class="header" href="#foundational-technologies">Foundational Technologies</a></h2>
+<hr />
+<hr />
+<p>IT Strategy ᐧ Project Management ᐧ Team Leadership ᐧ Technical Staff Development ᐧ Software Development Life Cycle (SDLC) ᐧ Agile &amp; Waterfall ᐧ Enterprise Architecture ᐧ Microsoft Dynamics ᐧ System Administration ᐧ Linux ᐧ NixOS ᐧ Windows Server ᐧ Kubernetes ᐧ Docker ᐧ Podman ᐧ DevOps ᐧ Blockchain ᐧ ZCash Integration ᐧ SQL ᐧ Postgresql ᐧ MySql ᐧ MS-SQL ᐧ NoSql ᐧ MongoDb ᐧ SurrealDb ᐧ DynamoDb ᐧ AWS ᐧ Azure ᐧ Linode ᐧ Contabo ᐧ Java ᐧ Jakarta EE ᐧ Quarkus ᐧ Spring Boot ᐧ Rust ᐧ Python ᐧ REST ᐧ gRPC ᐧ GIS ᐧ GeoTools ᐧ Qgis ᐧ SVN ᐧ Maven ᐧ GIT ᐧ Ansible ᐧ Terraform ᐧ Puppet ᐧ DevOps ᐧ Cloud ᐧ HIPAA Compliant Network Design ᐧ DevOps</p>
+<h2 id="background--summary"><a class="header" href="#background--summary">Background / Summary</a></h2>
+<hr />
+<hr />
+<p>Having 30 years of experience in the information technology field Dennis has worked with dozens of programming languages and foundational information technologies including all manner of products, gear, operating systems, databases, cloud based systems, utilized in both small (LAN), mobile (Domestic Carrier Level WAN) and global information systems; Outside the Continental United States (OCONUS).</p>
+<h2 id="executive-profile"><a class="header" href="#executive-profile">Executive Profile</a></h2>
+<hr />
+<hr />
+<p>Possesses a well-balanced skill set which includes business operations, systems analysis and information technology, and team management.</p>
+<p>This skill set is supported by strong communication skills and deep knowledge of numerous tools, techniques and analytical frameworks, which also proved useful in his role as a fiduciary, while a leader in technology field, and most recently the biotechnology industry.</p>
+<p>Consistently demonstrates initiative, flexibility and agility in support of financial reporting, budgeting, operations, marketing and strategic diversification efforts within the particularly competitive telecommunications and data center contracting industry with an emphasis on cost reduction, process optimization with a focus on preventing organizational sunk costs.</p>
+<p>Maintains a deep appreciation of the necessity and importance of operational security, a foundational belief engrained in the approach to information systems while operating and managing secure international computers and networks utilized earlier in his career while servicing the US State Department and related US Intelligence and Military organizations as required in critical TS/SCI environments. These system frameworks were reinforced by his experience in supporting infrastructure build outs in carrier level telecommunications networks and biotechnology fields where HIPAA regulations with regard to system development were considered elementary and the demands of fledgling proprietary AL/ML products being developed for global customers, clients, and project stakeholders.</p>
+<p>Technology is ultimately about people. This is the core of an adopted mission to drive and support: <strong>Teams, Tech, Tools &amp; Timing!</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="core_competencies.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="core_competencies.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/mermaid.min.js"></script>
+        <script src="./theme/mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

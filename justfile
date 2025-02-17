@@ -28,14 +28,23 @@ fmt:
   nix fmt
   echo 'fmt complete'
 
+# Add mdbook and plugins to Cargo.toml
+add_tools:
+  cargo add mdbook
+  cargo add mdbook-admonish
+  cargo add mdbook-footnote
+  cargo add mdbook-linkcheck
+  cargo add mdbook-mermaid
+  cargo add mdbook-toc
+
+
 # Install mdbook and plugins
-fetch_tools:
+fetch_tools: add_tools
   cargo install mdbook
   cargo install mdbook-admonish
   cargo install mdbook-footnote
   cargo install mdbook-linkcheck
   cargo install mdbook-mermaid
-  cargo install mdbook-pdf
   cargo install mdbook-toc
   echo 'fetch_tools complete'
 
@@ -48,12 +57,9 @@ build: clean
 build-nix:
   nix build
 
-# # Choose NOT to have github pages build the site - manual copy
-# gh-pages: build-nix
-#   rm -rf ./myGithubPages
-#   cp -r ./target/website ./myGithubPages
-#   cp -r ./src/theme/*.css ./myGithubPages/css/
-#   cp -r ./src/theme/*.js ./myGithubPages/
-#   git add .
-#   git commit -am "publishing site"
-#   git push
+# Choose NOT to have github pages build the site - manual copy
+gh-pages: build-nix
+  rm -rf ./book
+  git add .
+  git commit -am "publishing site"
+  git push
