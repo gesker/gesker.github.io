@@ -51,4 +51,8 @@ build:
 
 # Choose NOT to have github pages build the site - manual copy
 gh-pages:
-  cp -r ./target/website ./src/book
+  rm -rf ./myGithubPages
+  cp -r ./target/website ./myGithubPages
+  git add .
+  git commit -am "publishing site"
+  git push
