@@ -11,6 +11,11 @@ host:
   echo {{host}}
 
 
+timestamp := `date +'%Y%m%d-%H%M%S'`
+# Timestamp
+timestamp:
+  echo {{timestamp}}
+
 
 # Clean Project
 clean:
@@ -57,6 +62,7 @@ build: clean
 # Generate website by calling nix build - use outside shell
 build-nix:
   nix build
+  @echo 'build-nix complete'
 
 # Choose NOT to have github pages build the site - manual copy
 publish:
@@ -64,6 +70,6 @@ publish:
   nix build
   nix fmt
   git add .
-  git commit -am "publishing site"
+  git commit -am "publishing site {{timestamp}}"
   git push
-  @echo 'publish complete'
+  @echo "publish complete {{timestamp}}"
