@@ -42,12 +42,12 @@
         # preBuild = '' '';
 
         buildPhase = ''
-          just build
+          mdbook build . --dest-dir ./book
         '';
 
         installPhase = ''
           mkdir -p $out
-          cp -r ./src/book $out
+          cp -r ./book $out
         '';
       };
     };
