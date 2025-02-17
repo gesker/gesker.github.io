@@ -21,6 +21,7 @@ timestamp:
 clean:
   rm -rf ./book
   rm -rf ./result
+  rm -rf ./target
   echo 'clean complete'
 
 # Clean downloaded tools and libs
@@ -60,14 +61,13 @@ build: clean
   @echo 'build complete'
 
 # Generate website by calling nix build - use outside shell
-build-nix:
+build-nix: clean
+  nix fmt
   nix build
   @echo 'build-nix complete'
 
 # Choose NOT to have github pages build the site - manual copy
-publish:
-  rm -rf ./book
-  nix build
+publish: clean build-nix
   nix fmt
   git add .
   git commit -am "publishing site {{timestamp}}"

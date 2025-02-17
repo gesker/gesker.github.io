@@ -23,7 +23,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     env:
-      MDBOOK_VERSION: 0.4.40
+      MDBOOK_VERSION: 0.4.45
 
     steps:
       - name: Checkout repository
@@ -32,7 +32,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./myGithubPages
+          path: ./book/html
 
   # Deployment job
   deploy:
