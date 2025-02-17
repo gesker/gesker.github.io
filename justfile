@@ -69,8 +69,6 @@ build-nix:
 
 # Choose NOT to have github pages build the site - manual copy
 publish:
-  rm -rf ./book
-  nix build
   nix fmt
   git add .
   git commit -am "publishing site {{timestamp}}"
