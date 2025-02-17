@@ -2,7 +2,7 @@ fn main() {
     println!("cargo:rerun-if-changed=docs");
     if std::process::Command::new("mdbook")
         .arg("build")
-        .arg("../content")
+        .arg("../src")
         .arg("--dest-dir")
         .arg("../target/website")
         .status()

@@ -47,7 +47,7 @@
 
         installPhase = ''
           mkdir -p $out
-          cp -r ./target/website/* $out
+          cp -r ./src/book $out
         '';
       };
     };

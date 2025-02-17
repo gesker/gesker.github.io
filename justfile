@@ -46,7 +46,7 @@ build-cargo:
 
 # Generate website to target/website using mdbook directly
 build:
-  mdbook build ./content --dest-dir ../target/website
+  mdbook build
   echo 'build complete'
 
 
@@ -55,10 +55,12 @@ build:
 build-nix:
   nix build
 
-# Choose NOT to have github pages build the site - manual copy
-gh-pages: nix-build
-  rm -rf ./myGithubPages
-  cp -r ./target/website ./myGithubPages
-  git add .
-  git commit -am "publishing site"
-  git push
+# # Choose NOT to have github pages build the site - manual copy
+# gh-pages: build-nix
+#   rm -rf ./myGithubPages
+#   cp -r ./target/website ./myGithubPages
+#   cp -r ./src/theme/*.css ./myGithubPages/css/
+#   cp -r ./src/theme/*.js ./myGithubPages/
+#   git add .
+#   git commit -am "publishing site"
+#   git push
