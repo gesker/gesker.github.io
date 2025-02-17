@@ -49,8 +49,14 @@ build:
   mdbook build ./content --dest-dir ../target/website
   echo 'build complete'
 
+
+
+# Generate website by calling nix build - use outside shell
+build-nix:
+  nix build
+
 # Choose NOT to have github pages build the site - manual copy
-gh-pages:
+gh-pages: nix-build
   rm -rf ./myGithubPages
   cp -r ./target/website ./myGithubPages
   git add .
