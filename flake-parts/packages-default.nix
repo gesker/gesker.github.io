@@ -34,7 +34,6 @@
         configurePhase = ''
           export CARGO_HOME="./.cargo"
           export PATH=$CARGO_HOME/bin:$PATH
-          just clean
           just fetch_tools
         '';
 

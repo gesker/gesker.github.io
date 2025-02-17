@@ -53,23 +53,24 @@ fetch_tools: add_tools
   cargo install mdbook-linkcheck
   cargo install mdbook-mermaid
   cargo install mdbook-toc
-  cargo install mdbook mdbook-
   @echo 'fetch_tools complete'
 
 # Generate website by calling cargo build
-build: clean
+build:
   mdbook build . --dest-dir ./book
   @echo 'build complete'
 
 # Generate website by calling nix build - use outside shell
-build-nix: clean
+build-nix:
   nix fmt
   nix flake prefetch
   nix build
   @echo 'build-nix complete'
 
 # Choose NOT to have github pages build the site - manual copy
-publish: clean build-nix
+publish:
+  rm -rf ./book
+  nix build
   nix fmt
   git add .
   git commit -am "publishing site {{timestamp}}"
