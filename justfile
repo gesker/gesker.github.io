@@ -63,6 +63,7 @@ build: clean
 # Generate website by calling nix build - use outside shell
 build-nix: clean
   nix fmt
+  nix flake prefetch
   nix build
   @echo 'build-nix complete'
 
