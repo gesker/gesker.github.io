@@ -41,7 +41,7 @@
         # preBuild = '' '';
 
         buildPhase = ''
-          mdbook build . --dest-dir book
+          mdbook build . --dest-dir ./book
         '';
 
         installPhase = ''

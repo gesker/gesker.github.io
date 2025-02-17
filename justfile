@@ -53,6 +53,7 @@ fetch_tools: add_tools
   cargo install mdbook-linkcheck
   cargo install mdbook-mermaid
   cargo install mdbook-toc
+  cargo install mdbook mdbook-
   @echo 'fetch_tools complete'
 
 # Generate website by calling cargo build
