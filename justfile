@@ -49,4 +49,6 @@ build:
   mdbook build ./content --dest-dir ../target/website
   echo 'build complete'
 
-
+# Choose NOT to have github pages build the site - manual copy
+gh-pages:
+  cp -r ./target/website ./book

@@ -16,7 +16,7 @@
         tool-info = {
           type = "app";
           program = "${pkgs.writeShellScriptBin "tool-info" ''
-            ${pkgs.rustc}/bin/rustc --version
+            ${self' .packages.rust-oxalica/bin/rustc}/bin/rustc --version
           ''}/bin/tool-info";
         };
 

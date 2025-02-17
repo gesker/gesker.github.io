@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Publications</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CCW7P40HZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CCW7P40HZY');
+</script>
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>                            
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="publications"><a class="header" href="#publications">Publications</a></h2>
+<hr />
+<hr />
+<h3 id="two-must-have-tools-for-jakarta-ee-developers"><a class="header" href="#two-must-have-tools-for-jakarta-ee-developers"><a href="https://www.infoq.com/articles/tools-for-jakarta-ee-devs/">Two Must-Have Tools for Jakarta EE Developers</a></a></h3>
+<img src="images/infoq_logo.png" alt="infoq_journal_logo" style="width:10%; float: right;">
+<h4 id="infoqcom---april-2022"><a class="header" href="#infoqcom---april-2022"><a href="https://www.infoq.com/profile/Dennis-Gesker/#allActivity">InfoQ.com</a> - April 2022</a></h4>
+<hr />
+<h3 id="enter-jakarta-ee-an-inoculation-against-fear-uncertainty-and-doubt-in-the-java-community"><a class="header" href="#enter-jakarta-ee-an-inoculation-against-fear-uncertainty-and-doubt-in-the-java-community"><a href="https://www.linuxjournal.com/content/enter-jakarta-ee-inoculation-against-fear-uncertainty-and-doubt-java-community">Enter Jakarta EE: an Inoculation Against Fear, Uncertainty and Doubt in the Java Community</a></a></h3>
+<img src="images/linux_journal_logo.png" alt="linux_journal_logo" style="width:10%; float: right;">
+<h4 id="linux-journal-no-287-june-2018"><a class="header" href="#linux-journal-no-287-june-2018"><a href="https://www.linuxjournal.com/users/dennis-gesker">Linux Journal No. 287</a> June 2018</a></h4>
+<hr />
+<h3 id="blog-challenges-and-experiences-with-enterprise-grade-software-systems-and-supporting-components"><a class="header" href="#blog-challenges-and-experiences-with-enterprise-grade-software-systems-and-supporting-components">Blog: Challenges and experiences with enterprise grade software systems and supporting components</a></h3>
+<img src="images/wordpress_logo.png" alt="wordpress_logo" style="width:8%; float: right;">
+<h4 id="wordpress---on-going"><a class="header" href="#wordpress---on-going"><a href="https://gesker.wordpress.com">WordPress</a> - On-Going</a></h4>
+<hr />
+<h3 id="introducing-the-culture-of-free-and-open-source-software-to-the-department-of-state"><a class="header" href="#introducing-the-culture-of-free-and-open-source-software-to-the-department-of-state">Introducing the Culture of Free and Open Source Software to the Department of State</a></h3>
+<p><em><strong>Internally Circulated Strategy Paper - Department of State (SECRET/NOFORN)</strong></em></p>
+<img src="images/dos_logo.png" alt="dos_logo" style="width:8%; float: right;">
+<h4 id="department-of-state---november-2010"><a class="header" href="#department-of-state---november-2010"><em><a href="https://state.gov">Department of State</a> - November 2010</em></a></h4>
+<hr />
+<h3 id="jspwikiglassfish-install-18-part-blog-series"><a class="header" href="#jspwikiglassfish-install-18-part-blog-series"><a href="https://gesker.wordpress.com/2007/03/08/jspwikiglassfish-install-part-1-of-18-description/">JSPWiki/Glassfish Install-18 Part Blog Series</a></a></h3>
+<img src="images/blogger_logo.png" alt="blogger_logo" style="width:8%; float: right;">
+<h4 id="httpgeskerblogspotcom---march-2007"><a class="header" href="#httpgeskerblogspotcom---march-2007"><a href="https://gesker.wordpress.com/2007/03/08/jspwikiglassfish-install-part-1-of-18-description/">http://gesker.blogspot.com</a> - March 2007</a></h4>
+<hr />
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<h3 id="migrating-to-mozilla-thunderbird"><a class="header" href="#migrating-to-mozilla-thunderbird">Migrating to Mozilla Thunderbird</a></h3>
+<img src="images/sysadmin_logo.png" alt="sysadmin_logo" style="width:8%; float: right;">
+<h4 id="sysadmin-magazine---volume-14-no-6--june-2005"><a class="header" href="#sysadmin-magazine---volume-14-no-6--june-2005">SysAdmin Magazine - Volume 14 No. 6 -June 2005</a></h4>
+<hr />
+<h3 id="j2ee-a-shotgun-start"><a class="header" href="#j2ee-a-shotgun-start">J2EE: A Shotgun Start</a></h3>
+<img src="images/byte_logo.png" alt="byte_logo" style="width:8%; float: right;">
+<h4 id="bytecom---january-2003"><a class="header" href="#bytecom---january-2003">Byte.Com - January 2003</a></h4>
+<hr />
+<h3 id="alternatives-for-dynamic-web-development"><a class="header" href="#alternatives-for-dynamic-web-development"><a href="https://www.linuxjournal.com/article/4426">Alternatives for Dynamic Web Development</a></a></h3>
+<img src="images/linux_journal_logo.png" alt="linux_journal_logo" style="width:10%; float: right;">
+<h4 id="linux-journal-no83---march-2001"><a class="header" href="#linux-journal-no83---march-2001">Linux Journal No.83 - March 2001</a></h4>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="trademarks.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="professional.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="trademarks.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="professional.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
