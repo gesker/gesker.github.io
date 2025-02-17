@@ -31,17 +31,16 @@
 
         buildInputs = [ ];
 
-          # export CARGO_HOME="./.cargo"
-          # export PATH=$PATH:''${CARGO_HOME:-~/.cargo}/bin
-          # export CARGO_TARGET_DIR="./target"
-
         configurePhase = ''
+          export CARGO_HOME="./.cargo"
+          export PATH=$CARGO_HOME/bin:$PATH
           just fetch_tools
         '';
 
         # preBuild = '' '';
 
         buildPhase = ''
+          just clean
           just build
         '';
 

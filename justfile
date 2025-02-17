@@ -16,7 +16,6 @@ host:
 clean:
   rm -rf ./book
   rm -rf ./result
-  #cargo clean
   echo 'clean complete'
 
 # Clean downloaded tools and libs
@@ -42,19 +41,12 @@ fetch_tools:
 
 # Generate website by calling cargo build
 build: clean
-  mdbook build
+  mdbook build . --dest-dir ./book
   echo 'build complete'
 
-# # Generate website to target/website using mdbook directly
-# build-with-mdbook:
-#   mdbook build
-#   echo 'build complete'
-
-
-
-# # Generate website by calling nix build - use outside shell
-# build-nix:
-#   nix build
+# Generate website by calling nix build - use outside shell
+build-nix:
+  nix build
 
 # # Choose NOT to have github pages build the site - manual copy
 # gh-pages: build-nix
