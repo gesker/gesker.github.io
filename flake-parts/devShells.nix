@@ -21,10 +21,12 @@
 
         buildInputs = [ ];
 
-          # export CARGO_HOME="./.cargo"
+          # 
           # export PATH=$PATH:''${CARGO_HOME:-~/.cargo}/bin
 
         shellHook = ''
+          export CARGO_HOME="./.cargo"
+          export PATH=$CARGO_HOME/bin:$PATH
           echo
           just
           echo
