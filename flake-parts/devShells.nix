@@ -14,7 +14,6 @@
       devShells.default = pkgs.mkShell {
 
         nativeBuildInputs = [
-          self'.packages.google-chrome
           self'.packages.just
           self'.packages.perl
           self'.packages.rust-oxalica
@@ -22,9 +21,10 @@
 
         buildInputs = [ ];
 
+          # export CARGO_HOME="./.cargo"
+          # export PATH=$PATH:''${CARGO_HOME:-~/.cargo}/bin
+
         shellHook = ''
-          export CARGO_HOME="./.cargo"
-          export PATH=$PATH:''${CARGO_HOME:-~/.cargo}/bin
           echo
           just
           echo

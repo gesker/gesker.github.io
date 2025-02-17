@@ -41,13 +41,13 @@ fetch_tools:
   echo 'fetch_tools complete'
 
 # Generate website by calling cargo build
-build-cargo:
+build: fetch_tools
   cargo build
 
-# Generate website to target/website using mdbook directly
-build:
-  mdbook build
-  echo 'build complete'
+# # Generate website to target/website using mdbook directly
+# build-with-mdbook:
+#   mdbook build
+#   echo 'build complete'
 
 
 

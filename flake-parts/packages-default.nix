@@ -24,7 +24,6 @@
         doCheck = false; # Run tests
 
         nativeBuildInputs = [
-          self'.packages.google-chrome
           self'.packages.just
           self'.packages.perl
           self'.packages.rust-oxalica
@@ -32,10 +31,11 @@
 
         buildInputs = [ ];
 
+          # export CARGO_HOME="./.cargo"
+          # export PATH=$PATH:''${CARGO_HOME:-~/.cargo}/bin
+          # export CARGO_TARGET_DIR="./target"
+
         configurePhase = ''
-          export CARGO_HOME="./.cargo"
-          export PATH=$PATH:''${CARGO_HOME:-~/.cargo}/bin
-          export CARGO_TARGET_DIR="./target"
           just fetch_tools
         '';
 
