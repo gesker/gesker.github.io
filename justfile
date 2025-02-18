@@ -78,7 +78,8 @@ build-nix: clean
 build-nix-book: build-nix
   mkdir -p ./book
   cp -r ./result/* ./book
-  @echo 'cp-build-nix-result complete'
+  chmod -R u+rw book
+  @echo 'build-nix-book complete'
 
 # Choose NOT to have github pages build the site - manual copy
 publish: build-nix-book
