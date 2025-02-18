@@ -60,15 +60,28 @@ build:
   mdbook build . --dest-dir ./book
   @echo 'build complete'
 
-# Generate website by calling nix build - use outside shell
-build-nix:
+
+#
+# These tasks/targets are for use outside of a nix shell
+# DO NOT USE INSIDE A NIX SHELL
+#
+
+# Generate website ia 'nix build'
+build-nix: clean
+  git add .
   nix fmt
   nix flake prefetch
   nix build
   @echo 'build-nix complete'
 
+# Ensure a 'book' folder exists for github/workflows
+build-nix-book: build-nix
+  mkdir -p ./book
+  cp -r ./result/* ./book
+  @echo 'cp-build-nix-result complete'
+
 # Choose NOT to have github pages build the site - manual copy
-publish:
+publish: build-nix-book
   nix fmt
   git add .
   git commit -am "publishing site {{timestamp}}"

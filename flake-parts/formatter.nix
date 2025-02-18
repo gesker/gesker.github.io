@@ -196,7 +196,6 @@
                 "prettier-plugin-sh"
                 "prettier-plugin-toml"
               ];
-
             };
           };
 
