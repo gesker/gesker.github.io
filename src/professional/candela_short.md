@@ -1,6 +1,6 @@
 <p style="font-size: 1em; font-weight: bold;">Candela Global, LLC, Portland, Oregon</p>
 <img src="images/candela_logo.png" alt="candela_logo" style="width:10%; float: right;">
-<p style="font-size: 0.85em;"><b>Independent Contractor</b>: January 2022 – Present</p>
+<p style="font-size: 0.85em;"><b>Software Engineering and DevOps Manager</b>: January 2022 – Present</p>
 <p style="font-size: 0.75em;">
 
 - Systems Architecture and Modernization

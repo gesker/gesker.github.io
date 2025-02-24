@@ -6,8 +6,9 @@
 
 ---
 
-**Independent Contractor**: January 2022 – Present
+**Software Engineering and DevOps Manager**: January 2022 – Present
 
+- Contractor
 - [US Patent Preparation](patents_pending.md)
 - Systems Architecture and Modernization
   - MicroServices

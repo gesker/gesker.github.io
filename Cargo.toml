@@ -1,12 +1,13 @@
 [package]
 name = "package"
-version = "0.1.0"
-edition = "2021"
+version = "0.1.1"
+edition = "2024"
 
 [dependencies]
-mdbook = "0.4.45"
+mdbook = "0.4.40" # mdbook-pdf seems to require this version
 mdbook-admonish = "1.19.0"
 mdbook-footnote = "0.1.1"
 mdbook-linkcheck = "0.7.7"
 mdbook-mermaid = "0.14.1"
+mdbook-pdf = "0.1.11"
 mdbook-toc = "0.14.2"

@@ -23,13 +23,16 @@
     "nixfmt",
     "nixos",
     "numtide",
+    "overfit",
     "oxalica",
     "pkgs",
     "pname",
+    "Quarkus",
     "rustc",
     "shellcheck",
     "stdenv",
     "treefmt",
+    "Vertx",
     "yusdacra",
     "Zalag"
   ]
