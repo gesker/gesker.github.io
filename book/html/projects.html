@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="en" class="macchiato sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Projects</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="Home Page of Dennis Gesker">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-alerts.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+        <link rel="stylesheet" href="./theme/my.css">
+        <link rel="stylesheet" href="./theme/mdbook-admonish.css">
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "macchiato";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CCW7P40HZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CCW7P40HZY');
+</script>
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('macchiato')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>                            
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/gesker" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="projects-high-impact"><a class="header" href="#projects-high-impact">Projects: High Impact</a></h2>
+<hr />
+<hr />
+<h3 id="aveum-systems---dna-based-id-and-tracking-system"><a class="header" href="#aveum-systems---dna-based-id-and-tracking-system"><a href="https://www.aveumsystems.com">Aveum Systems</a> - DNA Based ID and Tracking System</a></h3>
+<img src="images/aveum_logo.png" alt="Aveum_Logo" style="width:10%; float: right;">
+<hr />
+<p><strong>Date</strong>: Spring 2024</p>
+<p>Supported <a href="https://www.aveumsystems.com/">Aveum Systems, Inc.</a> in formulating their
+technological road map for developing massively scalable <a href="https://en.wikipedia.org/wiki/DNA">DNA</a> information systems and
+related technologies which will enable the construction of identity systems that are hyper-secure, cryptographically
+rigorous, <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">AI</a>/<a href="https://en.wikipedia.org/wiki/Machine_learning">ML</a>
+backed and are at the same time AI resistant.</p>
+<p>Aveum Systems, Inc. is a Delaware Corporation operating in the US and Europe targeting pilot programs in Africa and
+the <a href="https://houseofsaud.com/">Kingdom of Saudi Arabia</a>.</p>
+<h3 id="alatrac---monetize--market-ready"><a class="header" href="#alatrac---monetize--market-ready"><a href="https://alatrac.com">AlaTrac</a> - Monetize &amp; Market Ready</a></h3>
+<img src="images/alatrac_logo.png" alt="Alatrac_Logo" style="width:10%; float: right;">
+<hr />
+<p><strong>Date</strong>: June 2021</p>
+<p>AlaTrac is a field service scheduling, asset tracking and assessment tool that has been leveraged by internal Alamon field service teams to assign, inspect and capture key attributes of industrial and utility assets including telephone poles, energy storage units, cellular towers and related infrastructures. While the solution is being leveraged by Alamon’s traditional lines of business, the objective is to productize the solution to third parties and create a new source of revenue for the company.</p>
+<p>AlaTrac is an open standards based, hybrid application that is currently running in the AWS cloud. While the solution is intended to be as easy to use as an excel spreadsheet, the platform’s capabilities extend beyond data input. AlaTrac’s core features include the ability to geolocate an asset, assign an asset for inspection, establish roles and set field based rules and intelligent routing for the intake of data by inspectors, including images, telemetry data from bluetooth sensors/device. These attributes are then captured via an Android based mobile application (Field Collector). Once captured, the mobile application monitors for connectivity and once connected (either via cellular or wifi network) intelligently publishes inputs and data back to the core platform (AlaTrac) based on data type and available bandwidth.</p>
+<p>While the AlaTrac has been leveraged internally on a wide range of projects, the solution is currently beyond a Minimal Viable Product, is in beta and continues to be prepped and hardened for third party access based upon the efficiency value and revenue facilitation it has already delivered for internal use cases.</p>
+<h3 id="transform-application-architecture"><a class="header" href="#transform-application-architecture">Transform Application Architecture</a></h3>
+<hr />
+<p><strong>Date</strong>: July 2019</p>
+<p>Initiate, move, transform and refactor critical legacy applications from monolithic to microservices, distributed systems leveraging Jakarta EE, MicroProfile, PostgreSQL, MongoDb, Lucene (Elastic Search), GeoTools (Java GIS libs), Hadoop and the Hadoop ecosystem of add ons (Hive, Spark, etc.) Leverage Cloud vendors where appropriate.</p>
+<h3 id="restructure-technology-department"><a class="header" href="#restructure-technology-department">Restructure Technology Department</a></h3>
+<hr />
+<p><strong>Date</strong>: March 2018</p>
+<p>Engaged and conferred with outside consulting and subject matter experts with regard to skill sets and technologies most appropriate for new green field software development projects. Acquired personnel to properly support ongoing technical operations needs. Optimized current software development processes to increase effectiveness of production of present and legacy development efforts. Added development personnel for go forward development efforts. Ensured that department structural changes are safely within the organization’s financial constraints and are ready to support the organization's strategic growth initiatives.</p>
+<h3 id="federal-business-opportunities-process-development"><a class="header" href="#federal-business-opportunities-process-development">Federal Business Opportunities Process Development</a></h3>
+<hr />
+<p><strong>Date</strong>: March 2017</p>
+<p>Designed, implemented and graphically mapped and trained personnel in a new business process for cross functional and cross departmental teams to absorb, screen, evaluate, pursue and track both direct and subcontract opportunities (and sales contacts) as generated by the U.S. Federal Business Opportunity job and purchasing solicitation system. ( <a href="http://fbo.gov/">http://FBO.gov</a> ) The system as designed not only enables but encourages effective communication between team members working on this initiative from different departments.</p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<h3 id="geographic-information-processing-cost-reduction"><a class="header" href="#geographic-information-processing-cost-reduction">Geographic Information Processing Cost Reduction</a></h3>
+<hr />
+<p><strong>Date</strong>: February 2017</p>
+<p>Extended effort to reduce/avoid significant licensing fees associated with ArcGIS Desktop and associated products by introducing Open Source alternatives. Most of the company’s ordinary usage and data processing of ESRI compatible (shp, gdb, csv, kml, etc.) and other GIS file formats had relied upon the proprietary and expensive software solution. Introduction and training of key organizational members and users on the alternative (e.g. QGIS, GDAL and PostGIS) Open Source products and database extensions all of which have no licensing fees but are capable of performing the same functionality as required internally by the company enabled savings equivalent to that of several full time administrative personnel.</p>
+<h3 id="marketing-effort-support"><a class="header" href="#marketing-effort-support">Marketing Effort Support</a></h3>
+<hr />
+<p><strong>Date</strong>: April 2016</p>
+<p>In the first quarter of this year I have been recruited by my leadership team to become more deeply involved both initiating direct customer contact and in a technical support role in the company's overall marketing effort.</p>
+<p>This has been an enjoyable diversion from my deep diving into technical projects and it has been a learning opportunity in observing and participating in the management of customer accounts serviced by my firm and by my senior management.</p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<h3 id="ms-access-marketing-database"><a class="header" href="#ms-access-marketing-database">MS-Access Marketing Database</a></h3>
+<hr />
+<p><strong>Date</strong>: November 2015</p>
+<p>As a team built a MS-Access 2013 database that provides an efficient system for customer contact interaction tracking &amp; follow up on bid opportunity tracking and revenue projection.</p>
+<p>The team's design had specific goals of increasing initial entry customer and contact speed, reducing need to enter duplicate data and reducing update time required by end users. Hence, the database schema is highly normalized and screen navigation is minimized to the point of being austere.</p>
+<p>The system has a (somewhat) novel functionality built in where, based on team defined business procedure triggers, the application sends email calendar events/notification using standards compliant "ics" attachments. This functionality is completely independent of the email client installed on the user's PC so compatibility across mail client versions are not an issue on this project. Only the appropriate team members -- and their administrative staff -- on any specific customer interaction or bid opportunity follow-up are notified, reducing "noise" often associated with many cloud solutions.</p>
+<p>Tracking and revenue projection reports have already been outlined/designed by the team and are pending automation. Application behavior, events, automation and reporting are of course written using Visual Basic for Applications (VBA.)</p>
+<p>Custom VBA code written for this project will be useful should we choose to hook to other applications within the Microsoft product line and perhaps even useful in pushing data to other custom applications within Alamon's stable of custom applications.</p>
+<p>It has the benefit of allowing customization and little to zero recurring cost (not much maintenance is anticipated) as compared to the cloud solutions we researched.</p>
+<h3 id="enhanced-project-reporting-site"><a class="header" href="#enhanced-project-reporting-site">Enhanced Project Reporting Site</a></h3>
+<hr />
+<p><strong>Date</strong>: August 2015</p>
+<p>MS-Dynamics Project Reporting site built on the Java EE platform using GlassFish 4.1, JSF (PrimeFaces) and Eclipselink.</p>
+<p>The site pulls necessary project data from the accounting system at the MS-SQL database layer to securely issue project information, performance, trending and charts to leadership, managers and supervisors.</p>
+<p>The site negates the cost associated with adding additional MS-Dynamics licenses and enables real time distribution of information to managers and supervisors not physically located at our company HQ.</p>
+<h3 id="file-management-system"><a class="header" href="#file-management-system">File Management System</a></h3>
+<hr />
+<p><strong>Date</strong>: May 2015</p>
+<p>Built a custom site on the Java EE platform using GlassFish 4.1, JSF (PrimeFaces) and Eclipselink.</p>
+<p>The site pulls necessary payroll data from the accounting system at the MS-SQL database layer to securely issue weekly payroll information to employees. It also allows administrative staff to publish documents by simply dropping documents into a shared Windows Domain network folder.</p>
+<p>The site completely negates the need for ADP payroll services and its associated cost, US Postal Cost and fosters the rapid distribution of documents (policy, procedure, safety, etc.) to employees.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="professional.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="awards.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="professional.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="awards.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/mermaid.min.js"></script>
+        <script src="./theme/mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

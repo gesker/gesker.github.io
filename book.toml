@@ -76,9 +76,9 @@ expand = true # partial words will match longer terms
 heading-split-level = 3 # link results to heading levels
 copy-js = true # include Javascript code for search
 
-[output.linkcheck]
-optional = true
-follow-web-links = true
+# [output.linkcheck]
+# optional = true
+# follow-web-links = true
 
 [output.pdf]
 theme = "rust"
