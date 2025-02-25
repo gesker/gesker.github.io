@@ -22,6 +22,7 @@ clean:
   rm -rf ./book
   rm -rf ./result
   rm -rf ./target
+  rm -rf ./tmp
   echo 'clean complete'
 
 # Clean downloaded tools and libs
@@ -61,8 +62,18 @@ fetch_tools: add_tools
 
 # Generate website by calling cargo build
 build:
+  rm -f book.toml
+  ln -sf book-build.toml book.toml
   mdbook build . --dest-dir ./book
   @echo 'build complete'
+
+# Generate website by calling cargo build
+build-with-pdf:
+  rm -f book.toml
+  ln -sf book-with-pdf.toml book.toml
+  mdbook build . --dest-dir ./book
+  @echo 'build with pdf complete'
+  @echo 'pdf is in ./book/pdf directory'
 
 
 #
@@ -73,6 +84,8 @@ build:
 # Generate website ia 'nix build'
 build-nix: clean
   git add .
+  rm -f book.toml
+  ln -sf book-build.toml book.toml  
   nix fmt
   nix flake prefetch
   nix build

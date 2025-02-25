@@ -17,6 +17,8 @@
           self'.packages.just
           self'.packages.perl
           self'.packages.rust-oxalica
+          self'.packages.mdbook-pdf
+          self'.packages.poppler_utils
         ];
 
         buildInputs = [ ];

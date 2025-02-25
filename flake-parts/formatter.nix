@@ -30,9 +30,17 @@
             "*.png"
             "*.svg"
             "*.xcf"
+            "*/CNAME"
             "CNAME"
             "justfile"
             "LICENSE"
+            "*.ttf"
+            "*.eot"
+            "*.woff"
+            "*.woff2"
+            "*.nojekyll"
+            "*/OPEN-SANS-LICENSE.txt"
+            "*/SOURCE-CODE-PRO-LICENSE.txt"
           ];
 
           # formatter = {

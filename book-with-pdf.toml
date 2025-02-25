@@ -1,0 +1,92 @@
+[book]
+src = "src"
+# title = "Dennis Gesker"
+description = "Home Page of Dennis Gesker"
+authors = ["Dennis Gesker"]
+multilingual = false
+language = "en"
+text-direction = "ltr"
+
+[build]
+build-dir = "./book" # the directory where the output is placed
+create-missing = true # whether or not to create missing pages
+use-default-preprocessors = true # use the default preprocessors
+extra-watch-dirs = [] # directories to watch for triggering builds
+
+[preprocessor]
+
+[preprocessor.admonish]
+after = ["links"]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[preprocessor.footnote]
+
+[output.html]
+site-url = "https://gesker.github.io"
+use-site-url-as-root = true
+default-theme = "macchiato"
+preferred-dark-theme = "macchiato"
+no-section-label = false
+git-repository-url = "https://github.com/gesker"
+# google-analytics = "G-CCW7P40HZY" Deprecated: Snippet is now added to the theme
+cname = "dennis.gesker.com"
+additional-css = [
+  "./theme/catppuccin.css",
+  "./theme/catppuccin-alerts.css",
+  "./theme/catppuccin-admonish.css",
+  "./theme/my.css",
+  "./theme/mdbook-admonish.css",
+  # "theme/google-doc.css",
+]
+additional-js = ["./theme/mermaid.min.js", "./theme/mermaid-init.js"]
+# input-404 = "not-found.md"
+
+[output.html.print]
+enable = true # include support for printable output
+page-break = true # insert page-break after each chapter
+
+[output.html.fold]
+enable = true # whether to enable section folding
+level = 0 # the depth to start folding
+
+[output.html.playground]
+editable = false # allows editing the source code
+copyable = false # include the copy button for copying code snippets
+copy-js = false # includes the JavaScript for the code editor
+line-numbers = false # displays line numbers for editable code
+runnable = false # displays a run button for rust code
+
+[output.html.search]
+enable = true # enables the search feature
+limit-results = 30 # maximum number of search results
+teaser-word-count = 30 # number of words used for a search result teaser
+use-boolean-and = true # multiple search terms must all match
+boost-title = 2 # ranking boost factor for matches in headers
+boost-hierarchy = 1 # ranking boost factor for matches in page names
+boost-paragraph = 1 # ranking boost factor for matches in text
+expand = true # partial words will match longer terms
+heading-split-level = 3 # link results to heading levels
+copy-js = true # include Javascript code for search
+
+[output.linkcheck]
+optional = true
+follow-web-links = true
+
+[output.pdf]
+theme = "rust"
+# page-ranges = "62-62" # Just print single page resume
+#page-ranges = "44-61" # Just print full resume
+# paper-width = 8
+# paper-height = 10
+margin-top = 0.05
+margin-bottom = 0.05
+margin-left = 0.05
+margin-right = 0.05

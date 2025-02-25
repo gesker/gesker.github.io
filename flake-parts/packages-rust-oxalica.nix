@@ -44,5 +44,9 @@
         }
       );
 
+      # Can't seem to get devshell to find these in .cargo/bin !!!
+      packages.mdbook-pdf = pkgs.mdbook-pdf;
+      packages.mdbook-linkcheck = pkgs.mdbook-linkcheck;
+
     };
 }
