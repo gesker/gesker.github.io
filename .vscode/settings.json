@@ -3,9 +3,9 @@
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
-    "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true
+    "**/Thumbs.db": true,
+    "**/CVS": true
   },
   "hide-files.files": [],
   "cSpell.words": [
@@ -17,6 +17,7 @@
     "dprint",
     "fileset",
     "hidelines",
+    "IAAC",
     "justfile",
     "linkcheck",
     "macchiato",
@@ -25,6 +26,7 @@
     "nixos",
     "nojekyll",
     "numtide",
+    "ONNX",
     "overfit",
     "oxalica",
     "pkgs",
