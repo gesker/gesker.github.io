@@ -39,7 +39,7 @@
           ./flake-parts/devShells.nix # devShells ==> nix develop
 
           # The actual package we wish to build (derivation)
-          ./flake-parts/packages-default.nix
+          ./flake-parts/build.nix
           # (import ./flake-parts/package-rust.nix {
           #   # package ==> nix build
           #   self = self;

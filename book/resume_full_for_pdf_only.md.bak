@@ -24,10 +24,9 @@
 
 {{#include profile.md}}
 
-<div style="page-break-before:always">&nbsp;</div>
-<p></p>
 
 {{#include professional/candela.md}}
+
 
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>

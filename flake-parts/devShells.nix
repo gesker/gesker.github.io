@@ -19,6 +19,7 @@
           self'.packages.rust-oxalica
           self'.packages.mdbook-pdf
           self'.packages.poppler_utils
+          self'.packages.pdftk
         ];
 
         buildInputs = [ ];

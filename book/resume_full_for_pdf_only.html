@@ -216,8 +216,6 @@ IT Strategy ᐧ Project Management ᐧ Team Leadership ᐧ Technical Staff Devel
 <p>Technology is ultimately about people. This is the core of an adopted mission to drive and support: <strong>Teams, Tech, Tools &amp; Timing!</strong></p>
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
-<br>
-<div style="height: 200px">
 <h3 id="candela-global-llc-portland-oregon"><a class="header" href="#candela-global-llc-portland-oregon"><a href="https://candela.global">Candela Global, LLC, Portland, Oregon</a></a></h3>
 <img src="images/candela_logo.png" alt="candela_Logo" style="width:10%; float: right;">
 <hr />
@@ -288,8 +286,7 @@ IT Strategy ᐧ Project Management ᐧ Team Leadership ᐧ Technical Staff Devel
 </li>
 <li>GIS Routine Validation
 <ul>
-<li>ArcGIS</li>
-<li>Geotools &amp; PostGIS
+<li>ArcGIS, Geotools &amp; PostGIS
 <ul>
 <li>ArcGIS Compliant Shapefile creation</li>
 </ul>
@@ -297,7 +294,6 @@ IT Strategy ᐧ Project Management ᐧ Team Leadership ᐧ Technical Staff Devel
 </ul>
 </li>
 </ul>
-</div>
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
 <h3 id="montana-state-university-bozeman-montana"><a class="header" href="#montana-state-university-bozeman-montana"><a href="https://www.montana.edu">Montana State University, Bozeman, Montana</a></a></h3>
@@ -846,6 +842,22 @@ the <a href="https://houseofsaud.com/">Kingdom of Saudi Arabia</a>.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

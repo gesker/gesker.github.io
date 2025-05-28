@@ -48,6 +48,14 @@ Current workaround to generate the pdf manually via `nix develop` and temporaril
 
 The [flake.nix](./flake.nix) makes use of the [Oxalica rust-overlay](https://github.com/oxalica/rust-overlay) in order to be sure to use the most recent stable version of the rust sdk and related build tools.
 
+### Combine PDFs
+
+After publishing print [short](https://dennis.gesker.com/resume_short_for_pdf_only.html) and [full](https://dennis.gesker.com/resume_full_for_pdf_only.html) using a web browser -- check the margins -- then...
+
+```bash
+pdftk Resume_Single_YYYYMMDD.pdf Resume_Long_YYYYMMDD.pdf cat output Resume_Combined_YYYYMMDD.pdf
+```
+
 ## Zalag Logo
 
 Zalag Logo is a registered trademark. All right reserved.

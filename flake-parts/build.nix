@@ -16,7 +16,7 @@
       packages.default = pkgs.rustPlatform.buildRustPackage {
 
         pname = "personalWebsite";
-        version = "1.0.4";
+        version = "1.0.7";
         src = self;
 
         cargoLock.lockFile = ../Cargo.lock;

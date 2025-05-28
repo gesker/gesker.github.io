@@ -41,6 +41,5 @@
   - Budget Preparation
   - CapEx & Depreciation Planning
 - GIS Routine Validation
-  - ArcGIS
-  - Geotools & PostGIS
+  - ArcGIS, Geotools & PostGIS
     - ArcGIS Compliant Shapefile creation
