@@ -8,6 +8,8 @@
 
 <img src="images/fcc_logo.png" alt="duke_Logo" style="width:10%; float: right;">
 
+---
+
 - [Amateur Radio License](https://www.fcc.gov/wireless/bureau-divisions/mobility-division/amateur-radio-service)
   - **2025-May**
   - Operator Privileges: **Amateur Extra**
@@ -17,6 +19,8 @@
 ### Duke/Coursera/Remote
 
 <img src="images/duke_logo.png" alt="duke_Logo" style="width:10%; float: right;">
+
+---
 
 - [Rust Programming Specialization](pdf/DukeCoursera_RustProgrammingSpecialization.pdf)
   - Comprehensive Rust Specialization
@@ -71,6 +75,10 @@
   - Logging and Error Handling
 
 ### TechStrong
+
+<img src="images/techstrong_logo.png" alt="techstrong_Logo" style="width:10%; float: right;">
+
+---
 
 - Evolution of Transactional Databases
   - **2023-Jan**
