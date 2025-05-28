@@ -28,6 +28,7 @@
             "*.ico"
             "*.ox"
             "*.png"
+            "*.pdf"
             "*.svg"
             "*.xcf"
             "*/CNAME"
