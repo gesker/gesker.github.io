@@ -1,0 +1,9 @@
+**/target
+/target
+/.cargo
+/result
+/tmp
+**/.DS_Store
+
+# mdbook serve preview output -- never the published tree
+/book-draft

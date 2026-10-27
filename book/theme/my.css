@@ -1,0 +1,1105 @@
+/*
+ * ---------------------------------------------------------------------------
+ * Visual layer for dennis.gesker.com -- mdBook 0.5.x
+ *
+ * Loaded last (see additional-css in book-build.toml), so everything here
+ * wins over mdbook's built-in css/variables.css, general.css and chrome.css.
+ *
+ * Palette is Catppuccin: theme/catppuccin.css defines mdbook's own variables
+ * (--bg, --fg, --links, --quote-border, ...) per flavour. This file adds the
+ * few tokens mdbook has no slot for (--accent, --surface, --hairline) plus the
+ * typography / rhythm / component layer on top.
+ *
+ * UNITS: mdbook sets `:root { font-size: 62.5% }`, so 1rem = 10px on this
+ * site, not 16px. Sizes here are written in px on purpose -- rem values would
+ * have to be multiplied by 1.6 to read naturally and that is a trap.
+ *
+ * Keep the "load-bearing hacks" at the bottom: they fix sidebar rows that
+ * SUMMARY.md produces and that mdbook renders as blank or duplicated entries.
+ * ---------------------------------------------------------------------------
+ */
+
+/* -- Tokens -------------------------------------------------------------- */
+
+:root {
+    /* Slightly wider than mdbook's 750px so tables and cards breathe, still
+     * short of a line length that hurts reading. */
+    --content-max-width: 820px;
+    --sidebar-target-width: 290px;
+    --page-padding: 32px;
+
+    --ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Text",
+        "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
+    --display-font: var(--ui-font);
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.18);
+    --shadow-md: 0 8px 28px -12px rgba(0, 0, 0, 0.45);
+}
+
+/* Stock mdbook themes have no --accent, so default it to their link colour.
+ * Catppuccin overrides follow and win on source order. */
+:root {
+    --accent: var(--links);
+}
+
+/* Derived surfaces, dark flavours first */
+.coal,
+.navy,
+.ayu,
+.mocha,
+.macchiato,
+.frappe,
+.rust {
+    --surface: color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --surface-raised: color-mix(in srgb, var(--fg) 8%, var(--bg));
+    --hairline: color-mix(in srgb, var(--fg) 13%, transparent);
+}
+
+/* Light flavours: build downward from white instead of upward from ink */
+.latte,
+.light {
+    --surface: color-mix(in srgb, var(--fg) 3%, var(--bg));
+    --surface-raised: color-mix(in srgb, var(--fg) 6%, var(--bg));
+    --hairline: color-mix(in srgb, var(--fg) 15%, transparent);
+}
+
+/* Catppuccin accent (mauve), one line per flavour. Must come after the
+ * --accent default above: same specificity, so source order decides. */
+.macchiato {
+    --accent: #c6a0f6;
+}
+.mocha {
+    --accent: #cba6f7;
+}
+.frappe {
+    --accent: #ca9ee6;
+}
+.latte {
+    --accent: #8839ef;
+}
+
+/* -- Typography ---------------------------------------------------------- */
+
+body {
+    font-family: var(--ui-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* No text-rendering: optimizeLegibility -- it makes Chrome emit every
+     * glyph as its own text op, which garbles copy/paste and PDF text
+     * extraction ("ad v a nt age") for no visual gain. */
+    font-kerning: normal;
+}
+
+/* -- Spacing scale ------------------------------------------------------
+ * Every vertical gap on the site is one of these. Before this existed the
+ * page used 9 unrelated values (10, 12, 15.6, 16.5, 21.28, 30, 32, 52, 56)
+ * which read as sloppy rather than as rhythm. */
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-12: 48px;
+}
+
+.content {
+    font-size: 16.5px;
+    line-height: 1.68;
+}
+
+.content p,
+.content li {
+    line-height: 1.68;
+}
+
+.content p,
+.content ul,
+.content ol,
+.content dl {
+    margin-block: 0 var(--space-4);
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+    font-family: var(--display-font);
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    line-height: 1.22;
+    text-wrap: balance;
+}
+
+.content h1 {
+    font-size: clamp(28px, 20px + 1.6vw, 38px);
+    margin-block: var(--space-6) var(--space-2);
+}
+
+.content h2 {
+    font-size: clamp(21px, 17px + 0.8vw, 26px);
+    margin-block: var(--space-12) var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--hairline);
+}
+
+.content h3 {
+    font-size: clamp(17px, 16px + 0.4vw, 20px);
+    margin-block: var(--space-8) var(--space-2);
+}
+
+.content h4 {
+    margin-block: var(--space-6) var(--space-2);
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.content strong {
+    font-weight: 650;
+}
+
+/* Links: quiet underline that firms up on hover */
+.content a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    transition: text-decoration-color 120ms ease;
+}
+
+.content a:hover {
+    text-decoration-color: currentColor;
+}
+
+/* Headings that are links (mdbook's .header) shouldn't look clickable-ugly */
+.content .header:link,
+.content .header:visited {
+    text-decoration: none;
+}
+
+/* -- Rhythm ------------------------------------------------------------ */
+
+/* The content uses `---` as a spacer, often twice in a row. Collapse the
+ * doubles and keep a single quiet hairline instead of a stack of rules. */
+.content hr {
+    border: 0;
+    height: 1px;
+    margin: var(--space-8) 0;
+    background: var(--hairline);
+}
+
+.content hr + hr {
+    display: none;
+}
+
+/* A separator directly after a hero or a heading is just noise */
+.content .hero + hr,
+.content h1 + hr,
+.content h2 + hr {
+    margin-top: 24px;
+}
+
+/* -- Tables as cards --------------------------------------------------- */
+
+.content table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin-block: var(--space-6);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--surface);
+    font-size: 0.97em;
+}
+
+.content table td,
+.content table th {
+    border: 0;
+    border-bottom: 1px solid var(--hairline);
+    padding: 0.62em 1em;
+    vertical-align: top;
+}
+
+.content table tr:last-child > td {
+    border-bottom: 0;
+}
+
+.content table thead th,
+.content table thead td {
+    background: var(--surface-raised);
+    font-weight: 650;
+    text-align: left;
+    letter-spacing: 0.01em;
+}
+
+/* mdbook zebra-stripes by default; inside a card it just adds mud */
+.content table tbody tr:nth-child(2n) {
+    background: transparent;
+}
+
+/* Filler cells (a lone <br>) that pad a grid-style table */
+.content table td:has(> br:only-child) {
+    display: none;
+}
+
+/* -- Images ------------------------------------------------------------ */
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+}
+
+/* Inline logos float right in the source markdown */
+.content img[style*="float: right"] {
+    margin: 0 0 var(--space-4) var(--space-6);
+    padding: 6px;
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    box-shadow: var(--shadow-sm);
+}
+
+/* -- Code -------------------------------------------------------------- */
+
+pre {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--hairline);
+    padding: 16px 18px;
+}
+
+:not(pre) > code {
+    border-radius: 6px;
+    padding: 2px 6px;
+    background: var(--surface-raised);
+}
+
+/* -- Hero (Welcome page, src/hero.md) ---------------------------------- */
+
+.hero {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: var(--space-2) 0 var(--space-8);
+    padding: var(--space-6);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(
+            circle at 12% 0%,
+            color-mix(in srgb, var(--accent) 16%, transparent),
+            transparent 62%
+        ),
+        var(--surface);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-copy {
+    flex: 1 1 320px;
+    min-width: 0;
+}
+
+.hero-eyebrow {
+    margin: 0 0 var(--space-3);
+    font-size: 11.5px;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.content .hero-name {
+    margin: 0 0 var(--space-2);
+    font-size: clamp(30px, 21px + 2.2vw, 46px);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+}
+
+.content .hero-tagline {
+    margin: 0 0 var(--space-4);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    opacity: 0.72;
+}
+
+.content .hero-lede {
+    margin: 0 0 var(--space-6);
+    max-width: 46ch;
+    font-size: 16px;
+    line-height: 1.62;
+    opacity: 0.92;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+/* `.content img` is more specific than `.hero-avatar`, so qualify it */
+.content img.hero-avatar {
+    flex: 0 0 auto;
+    width: 168px;
+    height: 168px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    box-shadow:
+        0 0 0 6px color-mix(in srgb, var(--accent) 12%, transparent),
+        var(--shadow-md);
+    background: var(--surface-raised);
+}
+
+@media (max-width: 700px) {
+    .hero {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 22px;
+    }
+    .content img.hero-avatar {
+        width: 116px;
+        height: 116px;
+    }
+}
+
+/* -- Buttons ----------------------------------------------------------- */
+
+/* Qualified with :link/:visited because chrome.css styles `.content a:link`
+ * with higher specificity than a plain class. */
+.content a.btn,
+.content a.btn:link,
+.content a.btn:visited {
+    display: inline-block;
+    padding: 8px 17px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--hairline);
+    background: var(--surface-raised);
+    color: var(--fg);
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition:
+        transform 120ms ease,
+        background 120ms ease,
+        border-color 120ms ease,
+        color 120ms ease;
+}
+
+.content a.btn:hover {
+    border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+    color: var(--fg);
+    transform: translateY(-1px);
+}
+
+/* Accent fill with the page background as the label colour: dark themes get
+ * dark ink on a pastel accent, light themes get light ink on a saturated one.
+ * That keeps the pair above 4.5:1 in every flavour without per-theme tokens. */
+.content a.btn-primary,
+.content a.btn-primary:link,
+.content a.btn-primary:visited {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+}
+
+.content a.btn-primary:hover {
+    /* mix toward --fg: dark themes lighten the accent, light themes darken it */
+    background: color-mix(in srgb, var(--accent) 85%, var(--fg));
+    color: var(--bg);
+}
+
+/* -- Top bar ----------------------------------------------------------- */
+
+.menu-title {
+    display: inline-block;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-family: var(--display-font);
+    font-size: 17px;
+    font-weight: 650;
+    line-height: var(--menu-bar-height);
+    letter-spacing: -0.015em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--accent);
+}
+
+#mdbook-menu-bar.sticky {
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(160%) blur(12px);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    border-bottom: 1px solid var(--hairline);
+}
+
+#mdbook-menu-bar .icon-button,
+#mdbook-menu-bar .right-buttons a {
+    border-radius: var(--radius-sm);
+    transition:
+        background 120ms ease,
+        color 120ms ease;
+}
+
+#mdbook-menu-bar .icon-button:hover,
+#mdbook-menu-bar .right-buttons a:hover {
+    background: var(--theme-hover);
+}
+
+/* -- Sidebar ----------------------------------------------------------- */
+
+.sidebar .sidebar-scrollbox {
+    padding: 9px 7px 40px;
+}
+
+.chapter li a {
+    padding: 7px 11px;
+    border-radius: var(--radius-sm);
+    letter-spacing: -0.004em;
+    transition:
+        background 120ms ease,
+        color 120ms ease;
+}
+
+.chapter li a:hover {
+    background: var(--theme-hover);
+}
+
+.chapter li a.active {
+    background: var(--theme-hover);
+    box-shadow: inset 2px 0 0 var(--accent);
+}
+
+/* Part titles and untitled section headers read as labels, not links */
+.chapter li.part-title,
+.chapter li.header-item > span,
+.chapter a.current-header {
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+/* -- Footer (theme/index.hbs) ------------------------------------------ */
+
+.site-footer {
+    max-width: var(--content-max-width);
+    margin: var(--space-12) auto 0;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--hairline);
+    font-size: 13.5px;
+    line-height: 1.6;
+    opacity: 0.75;
+}
+
+.site-footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    margin-bottom: var(--space-2);
+}
+
+.site-footer a {
+    color: var(--fg);
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+
+.site-footer a:hover {
+    color: var(--accent);
+}
+
+/* -- Mobile ------------------------------------------------------------ */
+
+@media (max-width: 1080px) {
+    :root {
+        --page-padding: 20px;
+    }
+}
+
+/* -- Organization cards (src/organizations.md) ------------------------- */
+
+.content ul.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: var(--space-3);
+    margin: var(--space-6) 0 var(--space-2);
+    padding: 0;
+    list-style: none;
+}
+
+.content ul.info-grid > li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: 0;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    min-width: 0;
+}
+
+/* One box, every logo inside it -- the favicons are 16-300px and the IEEE
+ * mark is a wide wordmark, so contain them all to the same optical size */
+.content .info-logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm);
+    /* A white plate, in every flavour: logos come with white, dark and
+     * transparent backgrounds baked in, and a themed plate makes dark-ink
+     * marks vanish on dark flavours and white marks vanish on light ones. */
+    background: #ffffff;
+    object-fit: contain;
+    box-shadow: none;
+}
+
+/* Fallback for an organization with no usable free mark */
+.content .info-monogram {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+}
+
+.info-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.content .info-title {
+    font-size: 18px;
+    font-weight: 650;
+    line-height: 1.3;
+}
+
+.info-sub {
+    font-size: 12.5px;
+    line-height: 1.4;
+    opacity: 0.72;
+}
+
+.info-meta {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0.6;
+}
+
+/* Stacked variant: one card per row (Publications, Patents, Trademarks) */
+.content ul.info-grid.info-stack {
+    grid-template-columns: 1fr;
+}
+
+.content ul.info-grid.info-stack > li {
+    align-items: flex-start;
+}
+
+/* Near-white marks (InfoQ, the State seal, Byte, Zalag) need a dark chip in
+ * every flavour or they vanish on the light card background */
+.content .info-logo--contrast {
+    background: #313244;
+    border-color: color-mix(in srgb, #313244 65%, var(--hairline));
+}
+
+/* Opaque-corner logos bring their own background; clip them to the plate so
+ * the box edge matches every other logo. */
+.content .info-logo,
+.content .info-card > img {
+    overflow: hidden;
+}
+
+.info-abstract {
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.55;
+    opacity: 0.8;
+}
+
+/* Small issuer badge under a page heading */
+.content .page-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 4px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.content .page-badge .info-logo {
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+}
+
+/* Cards for markdown-rich entries (Professional History, Projects, Education,
+ * Certifications, Portfolio). Raw <div> tags survive markdown parsing, so the
+ * paragraphs and bullet lists inside stay markdown while the box comes from
+ * CSS. Same box as .info-grid cards, so the whole site reads as one system. */
+.content .info-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 14px;
+    align-items: start;
+    margin: 0 0 var(--space-3);
+    padding: var(--space-4);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+}
+
+.content .info-card > img {
+    grid-column: 1;
+    grid-row: 1;
+    float: none;
+    width: 46px;
+    height: 46px;
+    margin: 0;
+    padding: 6px;
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm);
+    background: #ffffff;
+    object-fit: contain;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+.content .info-card > img.info-logo--contrast {
+    background: #313244;
+    border-color: color-mix(in srgb, #313244 65%, var(--hairline));
+}
+
+.content .info-card > *:not(img) {
+    grid-column: 2;
+    min-width: 0;
+}
+
+.content .info-card > h3 {
+    margin-top: 0;
+    margin-bottom: var(--space-1);
+    font-size: 18px;
+}
+
+.content .info-card > hr,
+.content .info-card > br:first-child {
+    display: none;
+}
+
+.content .info-card > *:last-child {
+    margin-bottom: 0;
+}
+
+/* -- In-page jumps and cross links ------------------------------------- */
+
+/* Hero quick links: the "click around" entry points, one line, quiet */
+.hero-jumps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin: 0;
+    font-size: 13.5px;
+}
+
+.hero-jumps a {
+    color: var(--fg);
+    opacity: 0.72;
+    text-decoration: none;
+    transition: opacity 120ms ease, color 120ms ease;
+}
+
+.hero-jumps a:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+
+/* Section chips at the top of a long page (the sidebar's "on this page" is
+ * suppressed, so in-page navigation lives in the content instead) */
+.content .toc-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-8);
+}
+
+.content .toc-chips a {
+    padding: 4px 11px;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--fg);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition: border-color 120ms ease, color 120ms ease;
+}
+
+.content .toc-chips a:hover {
+    border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+    color: var(--accent);
+}
+
+/* Reciprocal "related" line at the foot of a page */
+.content p.related {
+    margin-block: var(--space-6) 0;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--hairline);
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* -- Resume toolbar (non-printing) ------------------------------------- */
+
+.resume-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 var(--space-2);
+}
+
+/* The printable resume composes whole pages, so it inherits their h1 titles.
+ * Inside the document they are section headings, not page titles. */
+.content .resume-doc h1 {
+    font-size: 24px;
+    margin-block: var(--space-6) var(--space-2);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--hairline);
+}
+
+.content .resume-doc h2 {
+    font-size: 22px;
+}
+
+/* -- Print / PDF ------------------------------------------------------- */
+
+/*
+ * Print has to work from any flavour. Browsers drop background colours by
+ * default, so a dark theme would print light text on white paper: the print
+ * sheet forces the Latte palette on every flavour, hides the chrome and keeps
+ * sections from breaking across pages.
+ */
+@page {
+    size: letter;
+    margin: 16mm 14mm;
+}
+
+/* Contact line, shared by the Welcome page and both resumes */
+.contact-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-block: 0 var(--space-4);
+    font-size: 14.5px;
+    /* an integer line box keeps every gap this row takes part in on a whole
+       pixel, so the spacing audit is not chasing 24.36px */
+    line-height: 24px;
+}
+
+.contact-line .dot {
+    color: color-mix(in srgb, var(--fg) 35%, var(--bg));
+}
+
+.contact-line a:link,
+.contact-line a:visited {
+    color: var(--links);
+    text-decoration: none;
+}
+
+.contact-line a:hover {
+    text-decoration: underline;
+}
+
+@media print {
+    :root,
+    .latte,
+    .frappe,
+    .macchiato,
+    .mocha {
+        --bg: #ffffff;
+        --fg: #111111;
+        --links: #111111;
+        --surface: #ffffff;
+        --surface-raised: #f4f4f5;
+        --hairline: #d4d4d8;
+        --accent: #6d28d9;
+        --quote-bg: #f4f4f5;
+        --quote-border: #d4d4d8;
+        --table-border-color: #d4d4d8;
+        --table-header-bg: #f4f4f5;
+        --table-alternate-bg: #ffffff;
+        --inline-code-color: #111111;
+    }
+
+    html,
+    body {
+        background: #ffffff !important;
+        color: #111111 !important;
+    }
+
+    /* mdbook's print.css already hides sidebar + menu bar; it does not hide
+     * the page-level extras this theme adds. */
+    .hero-actions,
+    .hero-jumps,
+    .toc-chips,
+    p.related,
+    .site-footer,
+    .resume-toolbar,
+    .no-print,
+    #mdbook-help-container,
+    #mdbook-search-wrapper {
+        display: none !important;
+    }
+
+    .content {
+        max-width: none;
+        font-size: 10.5pt;
+        line-height: 1.45;
+    }
+
+    .content h1 {
+        font-size: 20pt;
+        margin-block: 0 6pt;
+    }
+
+    .content h2 {
+        font-size: 13pt;
+        margin-block: 16pt 6pt;
+        padding-bottom: 2pt;
+        border-bottom: 1pt solid #d4d4d8;
+    }
+
+    .content h3 {
+        font-size: 11.5pt;
+        margin-block: 12pt 4pt;
+    }
+
+    .content h4 {
+        font-size: 10pt;
+    }
+
+    /* Keep blocks whole; let long tables flow but never split a row */
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4 {
+        break-after: avoid-page;
+        break-inside: avoid;
+    }
+
+    .content p,
+    .content li,
+    .content blockquote,
+    .content .admonition,
+    .content table tr,
+    .content pre {
+        break-inside: avoid;
+    }
+
+    /* Lists must be allowed to break: a long certification list that cannot
+     * split gets pushed whole and leaves a near-empty page behind. */
+    .content ul,
+    .content ol {
+        break-inside: auto;
+    }
+
+    /* Section rules and decorative logos cost ink and pages */
+    .content hr,
+    .content img[style*="float: right"],
+    .content .info-logo,
+    .content .info-card > img {
+        display: none;
+    }
+
+    /* Cards keep their grouping but lose the chrome on paper. They must be
+     * allowed to split: a tall card that cannot fit gets pushed whole and
+     * leaves a half-empty page behind it. */
+    .content .info-card {
+        display: block;
+        margin: 0 0 5pt;
+        padding: 0;
+        border: 0;
+        background: none;
+        break-inside: auto;
+    }
+
+    /* ...so the heading inside a card has to stay with the text below it */
+    .content .info-card > h3,
+    .content .info-card > h4 {
+        break-after: avoid;
+        break-inside: avoid;
+    }
+
+    /* Screen spacing is for reading at desk distance; paper needs less.
+     * 12pt paragraph gaps were pushing ~6 lines a document onto an extra page. */
+    .content p,
+    .content ul,
+    .content ol,
+    .content dl {
+        margin-block: 0 5pt;
+    }
+
+    /* No widows or orphans: never leave one line of a paragraph behind */
+    .content p,
+    .content li {
+        orphans: 2;
+        widows: 2;
+    }
+
+    /* Short list cards stay whole; long ones were handled above */
+    .content ul.info-grid > li {
+        break-inside: avoid;
+    }
+
+    .content .info-card > *:not(img) {
+        grid-column: auto;
+    }
+
+    /* Organization cards collapse to a plain list on paper */
+    .content ul.info-grid {
+        display: block;
+        margin: 6pt 0;
+        padding-left: 14pt;
+        list-style: disc;
+    }
+
+    .content ul.info-grid > li {
+        display: list-item;
+        padding: 0;
+        border: 0;
+        background: none;
+        margin-bottom: 3pt;
+    }
+
+    .info-sub {
+        display: block;
+        font-size: 9.5pt;
+    }
+
+    .content .contact-line {
+        font-size: 9.5pt;
+        margin-block: 0 5pt;
+        gap: 4px;
+    }
+
+    /* The two-page ATS resume: denser headings and tighter paragraph gaps so a
+     * curated resume lands on two pages without shrinking the body copy. */
+    .content .resume-ats h1 {
+        font-size: 16pt;
+        margin-block: 0 2pt;
+    }
+
+    .content .resume-ats h2 {
+        font-size: 11pt;
+        margin-block: 8pt 2pt;
+        padding-bottom: 1pt;
+    }
+
+    .content .resume-ats h3 {
+        font-size: 10.5pt;
+        margin-block: 5pt 0;
+    }
+
+    .content .resume-ats {
+        font-size: 10pt;
+        line-height: 1.3;
+    }
+
+    .content .resume-ats p,
+    .content .resume-ats li,
+    .content .resume-ats ul {
+        margin-block: 0 2pt;
+    }
+
+    .content .resume-ats li {
+        line-height: 1.28;
+    }
+
+    /* A table that cannot fit is pushed whole, stranding the heading above it
+     * at the foot of the page. Let the table split; rows stay whole. */
+    .content table {
+        border: 1pt solid #d4d4d8;
+        background: #ffffff;
+        font-size: 9.5pt;
+        break-inside: auto;
+    }
+
+    .content table thead {
+        display: table-header-group;
+    }
+
+    .content table td,
+    .content table th {
+        border-bottom: 1pt solid #e4e4e7;
+        padding: 3pt 6pt;
+    }
+
+    .content a,
+    .content a:visited {
+        color: #111111;
+        text-decoration: none;
+    }
+
+    .hero {
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+        margin: 0 0 12pt;
+        background: none;
+    }
+
+    .content img.hero-avatar {
+        width: 84px;
+        height: 84px;
+        box-shadow: none;
+        border: 1pt solid #d4d4d8;
+    }
+}
+
+/* =======================================================================
+ * Load-bearing hacks -- do not remove without checking the rendered book
+ * ===================================================================== */
+
+/*
+ * mdbook 0.5 appends the current page's headings ("on this page") beneath the
+ * active chapter in the sidebar. Page headings on this site repeat the chapter
+ * titles, so the injected list reads as duplicated summary entries. Keep
+ * SUMMARY.md as the single source for the sidebar.
+ */
+.on-this-page {
+    display: none;
+}
+
+/*
+ * src/SUMMARY.md carries untitled entries so the pdf-only pages are rendered
+ * into the book. They have no label, so don't show them as blank sidebar rows.
+ */
+.chapter .chapter-item:has(> .chapter-link-wrapper > a[href]:empty) {
+    display: none;
+}
+
+/*
+ * A `---` separator in SUMMARY.md produces an empty chapter item next to its
+ * spacer, which the sidebar would show as a blank row. Keep the spacer line.
+ */
+.chapter .chapter-item:empty {
+    display: none;
+}

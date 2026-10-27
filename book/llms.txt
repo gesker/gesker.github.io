@@ -1,0 +1,33 @@
+# Dennis R. Gesker
+
+> Technology executive with 30+ years leading engineering, IT and product teams.
+
+## Machine-readable
+- [Resume Full, plain text](https://dennis.gesker.com/resume.txt): full resume, ATS-shaped, one column, no tables
+- [Resume Full, PDF](https://dennis.gesker.com/Dennis_Gesker_Resume.pdf): full resume, metadata, section bookmarks
+- [Resume Short, two-page PDF](https://dennis.gesker.com/Dennis_Gesker_Resume_Short.pdf): curated two-page version for portals that cap length
+- [Resume Full, JSON](https://dennis.gesker.com/resume.json): basics plus sections split by heading
+
+## Profiles
+- [LinkedIn](https://www.linkedin.com/in/gesker/)
+- [GitHub](https://github.com/gesker)
+- [Blog](https://gesker.wordpress.com)
+
+## Pages
+- [about](https://dennis.gesker.com/about.html): Dennis R. Gesker — CTO, VP Engineering and Director of IT with 30+ years across defense, government, energy and software products.
+- [awards](https://dennis.gesker.com/awards.html): Awards and recognition for Dennis R. Gesker — Alamon President's Award for Innovation and U.S. Department of State Extra Mile and Certificate of Appreciation.
+- [background](https://dennis.gesker.com/background.html): Background and summary for Dennis R. Gesker — 30 years spanning engineering, IT leadership and product delivery.
+- [certifications](https://dennis.gesker.com/certifications.html): Training and certifications for Dennis R. Gesker — FCC licenses, Duke/Coursera specializations, TechStrong and the Foreign Service Institute.
+- [education](https://dennis.gesker.com/education.html): Education: University of Pittsburgh, Katz Graduate School of Business, Drexel University and Central High School.
+- [foundational technologies](https://dennis.gesker.com/foundational_technologies.html): The technologies Dennis R. Gesker builds on — Linux, Rust, Java and Jakarta EE, PostgreSQL, Nix, containers, cloud and enterprise integration.
+- [index](https://dennis.gesker.com/index.html): Dennis R. Gesker — technology executive with 30+ years leading engineering, IT and product teams. Architecture, delivery, and the people who do the work.
+- [organizations](https://dennis.gesker.com/organizations.html): Professional organizations Dennis R. Gesker belongs to: Jakarta EE Ambassadors leadership council, Eclipse Foundation, IEEE, ACM-adjacent JCP, EFF and the Society of Catholic Scientists.
+- [patents pending](https://dennis.gesker.com/patents_pending.html): Pending U.S. patent applications by Dennis R. Gesker: distributed blockchain monitoring with latency compensation, and economic price discovery in social networks.
+- [portfolio](https://dennis.gesker.com/portfolio.html): Selected work by Dennis R. Gesker: Candela Global, pending patents in blockchain monitoring and price discovery, registered trademarks and published writing.
+- [professional](https://dennis.gesker.com/professional.html): Professional history of Dennis R. Gesker — CTO and VP Engineering roles at Candela Global, Montana State University, Alamon, Inc. and the U.S. Department of State.
+- [profile](https://dennis.gesker.com/profile.html): Executive profile of Dennis R. Gesker: what he owns, how he leads, and the results behind the résumé.
+- [projects](https://dennis.gesker.com/projects.html): High-impact projects delivered by Dennis R. Gesker — Tabulare, Aveum Systems, AlaTrac, and the infrastructure and reporting programs behind them.
+- [publications](https://dennis.gesker.com/publications.html): Published writing by Dennis R. Gesker — Linux Journal, InfoQ, SysAdmin Magazine, BYTE and U.S. Department of State strategy papers.
+- [resume ats](https://dennis.gesker.com/resume_ats.html): Résumé Short: the two-page résumé of Dennis R. Gesker, technology executive: selected highlights, experience, education, certifications, patents and publications.
+- [resume full](https://dennis.gesker.com/resume_full.html): The complete résumé of Dennis R. Gesker: 30+ years of technology leadership across Candela Global, Montana State University, Alamon and the U.S. Department of State.
+- [trademarks](https://dennis.gesker.com/trademarks.html): Registered trademark held by Dennis R. Gesker — the Zalag mark, Quaerite Lux et Sapientia.
